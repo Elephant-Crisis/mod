@@ -1,0 +1,150 @@
+﻿###########################
+# Greek Events
+###########################
+
+add_namespace = france
+
+country_event = {
+	id = france.6
+	title = france.6.t
+	desc = france.6.d
+	picture = GFX_report_event_german_volunteers
+	fire_only_once = yes
+    is_triggered_only = no
+	mean_time_to_happen = {
+		days = 3
+	}
+
+
+	option = { # Accept demands
+		name = france.6.a
+	trigger = {
+FRA = {
+		has_war = yes
+		has_country_flag = Belgium_vosstanie
+	  }
+	}
+		BEC = {
+			transfer_state = 6
+			country_event = BEС_belgium.1
+			add_state_core = 6
+			add_state_core = 34
+
+
+		}
+	}
+}
+country_event = {
+	id = france.4
+	title = france.4.t
+	desc = france.4.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = france.4.a
+		ai_chance = {	factor = 90	}
+		effect_tooltip = {
+			add_to_faction = FROM
+		}
+	}
+		
+	
+	
+		option = { # Accept demands
+		name = france.4.b
+		ai_chance = {	factor = 10	}
+		
+	}
+}
+
+country_event = {
+	id = france.5
+	title = france.5.t
+	desc = france.5.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = france.5.a
+add_stability = -0.05
+add_war_support = -0.025
+		
+	}
+		
+
+}
+
+add_namespace = france_event
+country_event = {
+	id = france_event.1
+	title = france_event.1.t
+	desc = france_event.1.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = { 
+		name = france_event.1.a
+ set_convoys = -50
+ add_stability = -0.05
+ add_timed_idea = { idea = FRA_blockada_eng days = 200 }
+		
+	}
+		
+
+}
+country_event = {
+	id = france_event.3
+	title = france_event.3.t
+	desc = france_event.3.d
+	picture = GFX_report_event_ast_navy
+	is_triggered_only = yes
+	option = { 
+		name = france_event.3.a
+custom_effect_tooltip = ENG_orkaz_fra
+add_war_support = 0.05
+ENG = { country_event = ENG_britain.62 }
+ai_chance = { factor = 90 }
+}
+		option = { 
+		name = france_event.3.b
+        ai_chance = {	factor = 10	}
+		add_ideas = FRA_birza_ruhnula
+		news_event = news.510
+		
+	}
+
+}
+country_event = {
+	id = france_event.4
+	title = france_event.4.t
+	desc = france_event.4.d
+	picture = GFX_report_event_ast_navy
+	is_triggered_only = yes
+	option = { 
+		name = france_event.4.a
+FRA = {
+AST = { transfer_state = 286 }
+AST = { transfer_state = 741 }
+AST = { transfer_state = 670 }
+AST = { transfer_state = 671 }
+}
+ai_chance = { factor = 40 }
+		news_event = news.511
+}
+		option = { 
+		name = france_event.4.b
+        ai_chance = {	factor = 60	}
+		AST  = {
+create_wargoal = {
+ 				type = take_state_focus
+ 				target = FRA
+ 				expire = 0
+ 				generator = { 286 }
+ 			}
+		
+	}
+	}
+
+}

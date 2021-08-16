@@ -1,0 +1,87 @@
+﻿division_template = {
+	name = "Samurai Division"
+
+	division_names_group = BUH_ARM_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+
+
+	}
+	priority = 2
+}
+division_template = {
+	name = "Cavalery"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = BUH_GAR_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+		cavalry = { x = 2 y = 3 }
+	}
+	priority = 0
+}
+
+units = {
+	#Samurai Armia 
+	division = {
+		name = "Samurai"
+		location = 10032
+		division_template = "Samurai Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.2
+	}
+	division = {
+		#name = "Samurai"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 26
+		}
+		location = 1117
+		division_template = "Samurai Division"
+		start_equipment_factor = 0.2
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		#name = "Samurai Cavalery"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11989
+		division_template = "Cavalery"
+		start_equipment_factor = 0.2
+
+	}
+	
+
+}
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "UES"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 30
+	}
+	
+	
+}

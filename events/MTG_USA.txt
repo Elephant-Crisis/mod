@@ -1,0 +1,30 @@
+﻿###########################
+# USA Events
+###########################
+
+add_namespace = USA_india
+country_event = {
+    id = USA_india.1
+    title = USA_india.1.t
+    desc = USA_india.1.d
+    picture = GFX_report_event_partition_of_india
+
+    is_triggered_only = yes
+
+    option = {
+        name = USA_india.1.a
+        add_to_faction = RAJ
+        RAJ = {
+            add_ai_strategy = {
+                type = alliance
+                id = "USA"
+                value = 200
+            }
+        }
+        hidden_effect = {
+            news_event = { id = news.502 }
+        }
+    }
+
+   
+}

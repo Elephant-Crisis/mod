@@ -1,0 +1,178 @@
+﻿###########################
+# Greek Events
+###########################
+
+add_namespace = IND_bidlo
+country_event = {
+	id = IND_bidlo.1
+	title = IND_bidlo.1.t
+	desc = IND_bidlo.1.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = IND_bidlo.1.a
+		ai_chance = {	factor = 50	}
+		RAJ = {
+								add_ideas = bidlo_vislano	
+		}
+	}
+	option = { # Accept demands
+		name = IND_bidlo.1.b
+		ai_chance = {	factor = 50	}
+		RAJ = {
+									add_ideas = bidlo_ostalos
+		}
+	}
+	option = { # Accept demands
+		name = IND_bidlo.1.c
+		ai_chance = {	factor = 50	}
+		RAJ = {
+									add_ideas = bidlo_rabotaet
+									425 = {
+				add_resource = {
+					type = steel
+					amount = 6
+				}
+			} 
+		}
+	}
+		
+}
+add_namespace = IND_psiholog
+country_event = {
+	id = IND_psiholog.2
+	title = IND_psiholog.2.t
+	desc = IND_psiholog.2.d
+	picture = GFX_report_event_quit_india_movement
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = IND_psiholog.2.a
+		ai_chance = {	factor = 50	}
+		RAJ = {
+								add_country_leader_trait = IND_shiza
+								add_state_core = 566
+								
+		}
+	}
+
+	}
+	
+	add_namespace = IND_psihologg
+country_event = {
+	id = IND_psihologg.1
+	title = IND_psihologg.1.t
+	desc = IND_psihologg.1.d
+	picture = GFX_report_event_quit_india_movement
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = IND_psihologg.1.a
+		ai_chance = {	factor = 50	}
+		RAJ = {
+								add_country_leader_trait = IND_normalniy
+								add_war_support = 0.1
+								
+		}
+	}
+
+	}
+	
+		add_namespace = RAJ_india
+country_event = {
+	id = RAJ_india.56
+	title = RAJ_india.56.t
+	desc = RAJ_india.56.d
+	picture = GFX_report_event_partition_of_india
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = RAJ_india.56.a
+		ai_chance = {	factor = 100	}
+		
+	}
+
+	}
+			add_namespace = RAJ_india
+country_event = {
+	id = RAJ_india.57
+	title = RAJ_india.57.t
+	desc = RAJ_india.57.d
+	picture = GFX_report_event_partition_of_india
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = RAJ_india.57.a
+		ai_chance = {	factor = 100	}
+		
+	}
+
+	}
+add_namespace = RAJ_india_otkaz
+country_event = {
+	id = RAJ_india_otkaz.2
+	title = RAJ_india_otkaz.2.t
+	desc = RAJ_india_otkaz.2.d
+	picture = GFX_report_event_partition_of_india
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = RAJ_india_otkaz.2.a
+		ai_chance = {	factor = 100	}
+		RAJ = {
+						create_wargoal = {
+					type = annex_everything
+					target = IND
+			}
+		}
+	}
+
+	}
+	
+	add_namespace = RAJ_annex
+country_event = {
+	id = RAJ_annex.1
+	title = RAJ_annex.1.t
+	desc = RAJ_annex.1.d
+	picture = GFX_report_event_partition_of_india
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = RAJ_annex.1.a
+		ai_chance = {	factor = 100	}
+		hidden_effect = {
+            news_event = { id = news.501 }
+        }
+	}
+
+	}
+
+	add_namespace = RAJ_india2_otkaz
+country_event = {
+	id = RAJ_india2_otkaz.2
+	title = RAJ_india2_otkaz.2.t
+	desc = RAJ_india2_otkaz.2.d
+	picture = GFX_report_event_partition_of_india
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = RAJ_india2_otkaz.2.a
+		ai_chance = {	factor = 100	}
+		RAJ = {
+						create_wargoal = {
+					type = annex_everything
+					target = MAR
+			}
+		}
+	}
+
+	}

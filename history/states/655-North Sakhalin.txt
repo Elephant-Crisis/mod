@@ -1,0 +1,22 @@
+
+state={
+	id=655
+	name="STATE_655"
+	manpower = 94759
+	
+	state_category = pastoral
+	history={
+		owner = BUH
+		add_core_of = BUH
+		add_claim_by = BUH
+		buildings = {
+			infrastructure = 4
+			air_base = 1
+                        arms_factory = 1
+		}
+	}
+
+	provinces={
+		855 1742 1755 
+	}
+}

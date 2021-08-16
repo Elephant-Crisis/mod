@@ -1,0 +1,127 @@
+﻿division_template = {
+	name = "Gvardia of Imperor"
+
+	division_names_group = EMP_ARM_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		
+
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Militia"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = BUH_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	# Gvardia
+	division = {
+		name = "South Gvardia of Imperor"
+		location = 1182
+		division_template = "Gvardia of Imperor"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8 
+	}
+	division = {
+		#name = "East Gvardia of Imperor"
+		location = 9998
+		division_template = "Gvardia of Imperor"
+		start_equipment_factor = 0.4
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		#name = " West Gvardia of Imperor"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 11908
+		division_template = "Gvardia of Imperor"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}
+	division = {
+		#name = "North Gvardia of Imperor"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 993
+		division_template = "Gvardia of Imperor"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}
+	#Army
+	division = {
+		#name = "Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 4184
+		division_template = "Militia"
+		start_equipment_factor = 0.5
+
+	}
+		
+
+}
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "EMP"
+		}
+		requested_factories = 1
+		progress = 0.38
+		efficiency = 80
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "EMP"
+		}
+		requested_factories = 1
+		progress = 0.38
+		efficiency = 80
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "EMP" 
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 80
+	}
+
+}

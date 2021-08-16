@@ -1,0 +1,876 @@
+focus_tree = {        
+      id = mongolia_focus ##Пример germen_focus
+      
+       country = {
+		factor = 0
+		modifier = {
+			tag = MON
+			add = 10
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+	
+	focus = {
+		id = MON_promka_pervaya
+		icon = GFX_goal_generic_production
+		cost = 5
+		completion_reward = {
+						add_tech_bonus = {
+				name = BUH_promka_reforma
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			}
+		x = 5
+		y = 0
+
+	}
+	focus = {
+		id = MON_voenka_ukr_voenka
+		icon = GFX_z_goal_annex_ukrainian
+		cost = 5
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = Army
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+			}
+		x = 11
+		y = 0
+
+	}
+	focus = {
+		id = MON_politka_nachalo
+		icon = GFX_goal_generic_demand_territory
+		completion_reward = {
+		add_political_power = 100
+		}
+		cost = 5
+		x = 18
+		y = 0
+
+	}
+	focus = {
+		id = MON_politka_vnesnaya
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 5
+		completion_reward = {
+		add_political_power = 100
+		}
+		x = 26
+		y = 0
+
+	}
+	focus = {
+		id = MON_promka_voenka1
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 5
+		prerequisite = {
+			focus = MON_promka_pervaya
+		}
+		completion_reward = {
+					random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}	
+			}
+		x = 2
+		y = 1
+
+	}
+	focus = {
+		id = MON_promka_voenka2
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5
+		prerequisite = {
+			focus = MON_promka_voenka1
+		}
+				completion_reward = {
+					random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}	
+			}
+		x = 2
+		y = 2
+
+	}
+	focus = {
+		id = MON_promka_civilka1
+		icon = GFX_goal_generic_construct_civilian
+		cost = 5
+		prerequisite = {
+			focus = MON_promka_pervaya
+		}
+				completion_reward = {
+					random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}	
+			}
+		x = 4
+		y = 1
+
+	}
+	focus = {
+		id = MON_promka_civilka2
+		icon = GFX_goal_generic_air_production
+		cost = 5
+		prerequisite = {
+			focus = MON_promka_civilka1
+		}
+						completion_reward = {
+					random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		every_state = {
+				limit = { 
+					OR = {
+						state = 611
+					}
+				}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			
+every_state = {
+				limit = { 
+					OR = {
+						state = 612
+					}
+				}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				every_state = {
+				limit = { 
+					OR = {
+						state = 756
+					}
+				}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}			
+			
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = MON_promka_obnovka_kompa
+		icon = GFX_goal_generic_consumer_goods
+		cost = 5
+		prerequisite = {
+			focus = MON_promka_voenka2
+		}
+		prerequisite = {
+			focus = MON_promka_civilka2
+		}
+		completion_reward = {
+		add_ideas = MON_obnovka_kompa
+		}
+		x = 3
+		y = 3
+
+	}
+	focus = {
+		id = MON_promka_stal
+		icon = GFX_goal_generic_position_armies
+		cost = 5
+		prerequisite = {
+			focus = MON_promka_pervaya
+		}
+				completion_reward = { 
+			330 = {
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+			} 
+		}
+		x = 6
+		y = 1
+
+	}
+	focus = {
+		id = MON_promka_volfram
+		icon = GFX_goal_generic_construction2
+		cost = 5
+		prerequisite = {
+			focus = MON_promka_stal
+		}
+						completion_reward = { 
+			330 = {
+				add_resource = {
+					type = tungsten
+					amount = 15
+				}
+			} 
+		}
+		x = 6
+		y = 2
+
+	}
+	focus = {
+		id = MON_voenka_rozdivka
+		icon = GFX_goal_generic_production2
+		cost = 5
+		prerequisite = {
+			focus = MON_voenka_ukr_voenka
+		}
+		completion_reward = {
+					if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = encryption_tech
+					category = decryption_tech
+				}
+							else = {
+				hidden_effect = {
+					set_technology = { lar_decryption_bonus_tech = 1 }
+				}
+				custom_effect_tooltip = lar_decryption_bonus_tt
+			}
+			}
+			}
+		x = 10
+		y = 1
+
+	}
+	focus = {
+		id = MON_voenka_son_sturmoviki
+		icon = GFX_goal_generic_air_bomber
+		cost = 5
+		prerequisite = {
+			focus = MON_voenka_rozdivka
+		}
+				completion_reward = {
+					add_tech_bonus = {
+				name = CAS
+				uses = 1
+				bonus = 2.0
+				category = cas_bomber
+			}
+			add_tech_bonus = {
+				name = fighter_command
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+		}
+		x = 10
+		y = 2
+
+	}
+	focus = {
+		id = MON_voenka_motori_tanki
+		icon = GFX_goal_generic_army_doctrines
+		cost = 5
+		prerequisite = {
+			focus = MON_voenka_son_sturmoviki
+		}
+		completion_reward = {
+					add_tech_bonus = {
+				name = MON_modernising
+				bonus = 2.0
+				uses = 1
+				category = motorized_equipment
+			}
+				add_tech_bonus = {
+				name = MON_tank
+				bonus = 1.0
+				uses = 2
+				technology = basic_light_tank
+				technology = improved_light_tank
+			}
+			}
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = MON_voenka_ne_strelat_bogdany
+		icon = GFX_goal_generic_military_sphere
+		cost = 5
+		prerequisite = {
+			focus = MON_voenka_ukr_voenka
+		}
+		completion_reward = {
+		add_ideas = MON_ne_strelat_po_bogdany
+		}
+		x = 12
+		y = 1
+
+	}
+	focus = {
+		id = MON_voenka_ukr_konniza
+		icon = GFX_goal_generic_cavalry
+		cost = 5
+		prerequisite = {
+			focus = MON_voenka_ne_strelat_bogdany
+		}
+				completion_reward = {
+		add_ideas = MON_ukr_konniza
+		}
+		x = 12
+		y = 2
+
+	}
+	focus = {
+		id = MON_voenka_za_sho
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = MON_voenka_ukr_konniza
+		}
+						completion_reward = {
+		add_ideas = MON_mena_to_za_sho
+		}
+		x = 12
+		y = 3
+
+	}
+	focus = {
+		id = MON_voenka_soldat_pofigist
+		icon = GFX_focus_mex_soldaderas
+		cost = 5
+		prerequisite = {
+			focus = MON_voenka_za_sho
+			focus = MON_voenka_motori_tanki
+		}
+completion_reward = { 
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = MON_lee_shou_hsin 
+
+}
+		x = 11
+		y = 4
+
+	}
+	focus = {
+		id = MON_politka_ukreplenie_monahi
+		icon = GFX_goal_generic_improve_relations
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_nachalo
+		}
+		completion_reward = {
+		add_political_power = 100
+		add_country_leader_trait = MON_bog_dan
+		}
+		x = 16
+		y = 1
+
+	}
+	focus = {
+		id = MON_politka_rasstrel_bessmertnogo
+		icon = GFX_goal_generic_political_pressure
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_ukreplenie_monahi
+		}
+		completion_reward = {
+		remove_ideas = MON_nemes
+		}
+		x = 16
+		y = 2
+
+	}
+	focus = {
+		id = MON_politka_sharaga
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_nachalo
+		}
+		completion_reward = {
+		add_ideas = MON_sharaga
+		}
+		x = 18
+		y = 1
+
+	}
+	focus = {
+		id = MON_politka_diplom
+		icon = GFX_goal_generic_defence
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_sharaga
+		}
+		completion_reward = {
+		add_research_slot = 1
+		}
+		x = 18
+		y = 2
+
+	}
+	focus = {
+		id = MON_politka_stopka_documentov
+		icon = GFX_goal_generic_position_armies
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_nachalo
+		}
+		completion_reward = {
+		unlock_decision_tooltip = MON_kompomat_AST
+		unlock_decision_tooltip = MON_kompomat_JAP
+		unlock_decision_tooltip = MON_kompomat_IND
+		}
+		x = 20
+		y = 1
+
+	}
+	focus = {
+		id = MON_politka_korova_rassledovatel_sovetnik
+		icon = GFX_focus_usa_tank_destroyer_doctrine
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_stopka_documentov
+		}
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = MON_bik
+		}
+		x = 20
+		y = 2
+
+	}
+	focus = {
+		id = MON_politka_gachi_legalazy
+		icon = GFX_goal_generic_national_unity
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_diplom
+		}
+				completion_reward = {
+		add_ideas = MON_vintovki
+		}
+		x = 18
+		y = 3
+
+	}
+		focus = {
+		id = MON_politka_rediska
+		icon = GFX_focus_focus_fra_liberte_egalite_solidarite
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_rasstrel_bessmertnogo
+		}
+		completion_reward = {
+		add_ideas = MON_rediska
+		}
+		x = 16
+		y = 3
+
+	}
+			focus = {
+		id = MON_utopil_korabl
+		icon = GFX_focus_generic_destroyer
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_korova_rassledovatel_sovetnik
+		}
+		completion_reward = {
+		country_event = MON_utopil_korabl.4
+		}
+		y = 3
+        x = 20
+	}
+	focus = {
+		id = MON_politka_allies
+		icon = GFX_goal_generic_alliance
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_vnesnaya
+		}
+				completion_reward = {
+		set_rule = { can_create_factions = yes }
+		create_faction = KAS_soyuz
+		}
+		x = 26
+		y = 1
+
+	}
+	focus = {
+		id = MON_politka_MAN
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_allies
+		}
+		mutually_exclusive = {
+			focus = MON_politka_MAN_soyuz
+		}
+		completion_reward = {
+				create_wargoal = {
+					type = take_state_focus
+					target = MAN
+					expire = 0
+				}
+		}
+		x = 23
+		y = 2
+
+	}
+	focus = {
+		id = MON_politka_MAN_soyuz
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_allies
+		}
+		mutually_exclusive = {
+			focus = MON_politka_MAN
+		}
+						completion_reward = {
+
+			MAN = { country_event = generic.5 days = 30 }
+			add_ai_strategy = {
+				type = protect
+				id = "MAN"
+				value = 100
+			}
+		}
+		x = 25
+		y = 2
+
+	}
+	focus = {
+		id = MON_politka_CHI_war
+		icon = GFX_focus_attack_china
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_MAN
+			focus = MON_politka_MAN_soyuz
+		}
+		mutually_exclusive = {
+			focus = MON_politka_CHI_pomosh_obyedinenie
+		}
+				completion_reward = {
+				create_wargoal = {
+					type = take_state_focus
+					target = CHI
+					expire = 0
+				}
+		}
+		x = 23
+		y = 3
+
+	}
+	focus = {
+		id = MON_politka_CHI_pomosh_obyedinenie
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_MAN_soyuz
+			focus = MON_politka_MAN
+		}
+						completion_reward = {
+
+			CHI = { country_event = generic.5 days = 30 }
+			add_ai_strategy = {
+				type = protect
+				id = "CHI"
+				value = 100
+			}
+		}
+		mutually_exclusive = {
+			focus = MON_politka_CHI_war
+		}
+		x = 25
+		y = 3
+
+	}
+	focus = {
+		id = MON_politka_pustoshi_CHI_war
+		icon = GFX_goal_generic_army_artillery
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_CHI_war
+			focus = MON_politka_CHI_pomosh_obyedinenie
+		}
+		mutually_exclusive = {
+			focus = MON_politka_pustoshi_CHI_soyuz
+		}
+				completion_reward = {
+		create_wargoal = {
+					type = take_state_focus
+					target = XSM
+					expire = 0
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = SIK
+					expire = 0
+				}
+								create_wargoal = {
+					type = take_state_focus
+					target = SHX
+					expire = 0
+				}
+		}
+		x = 23
+		y = 4
+
+	}
+	focus = {
+		id = MON_politka_pustoshi_CHI_soyuz
+		icon = GFX_goal_generic_national_unity
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_CHI_pomosh_obyedinenie
+			focus = MON_politka_CHI_war
+		}
+		mutually_exclusive = {
+			focus = MON_politka_pustoshi_CHI_war
+		}
+								completion_reward = {
+
+			SHX = { country_event = generic.5 days = 30 }
+			add_ai_strategy = {
+				type = protect
+				id = "SHX"
+				value = 100
+			}
+			
+			SIK = { country_event = generic.5 days = 30 }
+			add_ai_strategy = {
+				type = protect
+				id = "SIK"
+				value = 100
+			}
+			
+						XSM = { country_event = generic.5 days = 30 }
+			add_ai_strategy = {
+				type = protect
+				id = "XSM"
+				value = 100
+			}
+		}
+		x = 25
+		y = 4
+
+	}
+	focus = {
+		id = MON_politka_KAZ_war
+		icon = GFX_goal_generic_military_sphere
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_allies
+		}
+		mutually_exclusive = {
+			focus = MON_politka_KAZ_soyuz
+		}
+				completion_reward = {
+		create_wargoal = {
+					type = take_state_focus
+					target = KAZ
+					expire = 0
+				}
+		}
+		x = 27
+		y = 2
+
+	}
+	focus = {
+		id = MON_politka_BUR_war
+		icon = GFX_goal_generic_military_sphere
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_allies
+		}
+		mutually_exclusive = {
+			focus = MON_politka_KAZ_soyuz
+		}
+				completion_reward = {
+		create_wargoal = {
+					type = take_state_focus
+					target = BUR
+					expire = 0
+				}
+				add_state_core = 566
+		}
+		x = 27
+		y = 3
+
+	}
+	focus = {
+		id = MON_politka_KAS_empire
+		icon = GFX_goal_generic_propaganda
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_rediska
+		}
+				prerequisite = {
+			focus = MON_politka_gachi_legalazy
+		}
+				prerequisite = {
+			focus = MON_utopil_korabl
+		}
+		completion_reward = {
+		add_research_slot = 1
+		add_stability = 0.2
+		add_war_support = 0.2
+		}
+		x = 18
+		y = 4
+
+	}
+	focus = {
+		id = MON_politka_KAZ_soyuz
+		icon = GFX_goal_generic_improve_relations
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_allies
+		}
+		mutually_exclusive = {
+			focus = MON_politka_KAZ_war
+		}
+				completion_reward = {
+
+			KAZ = { country_event = generic.5 days = 30 }
+			add_ai_strategy = {
+				type = protect
+				id = "KAZ"
+				value = 100
+			}
+		}
+		x = 29
+		y = 2
+
+	}
+	focus = {
+		id = MON_politka_CHI_dalnie_war
+		icon = GFX_goal_generic_small_arms
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_pustoshi_CHI_war
+			focus = MON_politka_pustoshi_CHI_soyuz
+		}
+		mutually_exclusive = {
+			focus = MON_politka_dalnie_pomosh
+		}
+				completion_reward = {
+		create_wargoal = {
+					type = take_state_focus
+					target = GXC
+					expire = 0
+				}
+						create_wargoal = {
+					type = take_state_focus
+					target = YUN
+					expire = 0
+				}
+		}
+		x = 23
+		y = 5
+
+	}
+	focus = {
+		id = MON_politka_dalnie_pomosh
+		icon = GFX_focus_chi_whampoa_military_academy
+		cost = 5
+		prerequisite = {
+			focus = MON_politka_pustoshi_CHI_soyuz
+			focus = MON_politka_pustoshi_CHI_war
+		}
+		mutually_exclusive = {
+			focus = MON_politka_CHI_dalnie_war
+		}
+						completion_reward = {
+
+			YUN = { country_event = generic.5 days = 30 }
+			add_ai_strategy = {
+				type = protect
+				id = "YUN"
+				value = 100
+			}
+			
+			GXC = { country_event = generic.5 days = 30 }
+			add_ai_strategy = {
+				type = protect
+				id = "GXC"
+				value = 100
+			}
+		}
+		x = 25
+		y = 5
+
+	}
+	
+	
+
+	
+	
+	
+
+	
+}
+
+

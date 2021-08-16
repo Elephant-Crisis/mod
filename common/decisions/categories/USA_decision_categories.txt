@@ -1,0 +1,12 @@
+################
+##### USA ######
+################
+
+USA_torg_prestavitelstvo = {
+	
+	allowed = {
+		original_tag = USA
+		
+	}
+}
+

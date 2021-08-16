@@ -1,0 +1,79 @@
+﻿division_template = {
+	name = "Samurai"
+
+	division_names_group = HOS_ARM_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+
+	}
+	priority = 2
+}
+
+units = {
+	#Army of Samurai 
+	division = {
+		name = "Samurai"
+		location = 10125
+		division_template = "Samurai"
+		start_equipment_factor = 0.2
+		start_experience_factor = 0.2
+	}
+	division = {
+		#name = "Samurai"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 26
+		}
+		location = 7087
+		division_template = "Samurai"
+		start_equipment_factor = 0.2
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		#name = "Samurai"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 7072
+		division_template = "Samurai"
+		start_equipment_factor = 0.2
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		#name = "Samurai"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 4054
+		division_template = "Samurai"
+		start_equipment_factor = 0.2
+		start_experience_factor = 0.2
+
+	}
+	
+}
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "BUH"
+		}
+		requested_factories = 2
+		progress = 0.38
+		efficiency = 80
+	}
+}

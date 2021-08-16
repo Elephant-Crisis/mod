@@ -1,0 +1,330 @@
+﻿###########################
+# Australia Events
+###########################
+
+#### RED ELEPHANT НЕ УДАЛЯЙ!!!
+add_namespace = ENG_britain
+country_event = {
+    id = ENG_britain.55
+    title = ENG_britain.55.t
+    desc = ENG_britain.55.d
+    picture = GFX_report_event_partition_of_india
+
+    is_triggered_only = yes
+
+    option = {
+        name = ENG_britain.55.a
+        add_to_faction = RAJ
+        RAJ = {
+            add_ai_strategy = {
+                type = alliance
+                id = "ENG"
+                value = 200
+            }
+        }
+        hidden_effect = {
+            news_event = { id = news.500 }
+        }
+    }
+
+   
+}
+add_namespace ENG_britain
+country_event = {
+    id = ENG_britain.56
+    title = ENG_britain.56.t
+    desc = ENG_britain.56.d
+    picture = GFX_report_event_partition_of_india
+
+    is_triggered_only = yes
+
+    option = {
+        name = ENG_britain.56.a
+        RAJ = {
+            random_owned_controlled_state = {
+				prioritize = { 423 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+		ENG = {
+		add_political_power = -75
+		}
+        hidden_effect = {
+           RAJ = { country_event = { id = RAJ_india.56 } }
+        }
+		ai_chance = {	factor = 80	}
+    }
+	option = {
+        name = ENG_britain.56.b
+        hidden_effect = {
+           RAJ = { country_event = { id = RAJ_india.57 } }
+        }
+		ai_chance = {	factor = 20	}
+    }
+
+   
+}
+
+add_namespace ENG_britain
+country_event = {
+    id = ENG_britain.57
+    title = ENG_britain.57.t
+    desc = ENG_britain.57.d
+    picture = GFX_report_event_american_hunger_march
+
+    is_triggered_only = yes
+
+    option = {
+        name = ENG_britain.57.a
+
+		ENG = {
+		add_political_power = -75
+		807 = {
+	add_compliance = 5
+	
+}
+add_stability = 0.03
+		}
+
+		ai_chance = {	factor = 50	}
+    }
+	option = {
+        name = ENG_britain.57.b
+ENG = {
+		add_political_power = -75
+		
+	add_war_support = 0.05
+
+		}
+		ai_chance = {	factor = 50	}
+    } 
+}
+
+add_namespace ENG_britain
+country_event = {
+    id = ENG_britain.58
+    title = ENG_britain.58.t
+    desc = ENG_britain.58.d
+    picture = GFX_report_event_riot_police_poland
+
+    is_triggered_only = yes
+
+    option = {
+        name = ENG_britain.58.a
+
+		ENG = {
+		357 = {
+	add_compliance = -5
+	
+}
+807 = {
+	add_compliance = -5
+	
+}
+		}
+
+		ai_chance = {	factor = 50	}
+    }
+	option = {
+        name = ENG_britain.58.b
+
+ENG = {
+		357 = {
+	add_compliance = 5
+	
+}
+807 = {
+	add_compliance = 5
+	
+}
+add_manpower = -25000
+add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -2000
+			    producer = ENG
+			}
+		}
+
+		ai_chance = {	factor = 50	}
+    } 
+}
+
+country_event = {
+    id = ENG_britain.59
+    title = ENG_britain.59.t
+    desc = ENG_britain.59.d
+    picture = GFX_report_event_soviet_finnish_pact
+
+    is_triggered_only = yes
+
+    option = {
+        name = ENG_britain.59.a
+BEL = {
+country_event = BEL_belgium.1
+}
+
+    }
+
+}
+
+country_event = {
+    id = ENG_britain.60
+    title = ENG_britain.60.t
+    desc = ENG_britain.60.d
+    picture = GFX_report_event_soviet_finnish_pact
+
+    is_triggered_only = yes
+
+    option = {
+        name = ENG_britain.60.a
+create_wargoal = {
+					type = take_state_focus
+					target = BEL
+					generator = { 295 }
+				
+		}
+
+    }
+
+}
+country_event = {
+    id = ENG_britain.61
+    title = ENG_britain.61.t
+    desc = ENG_britain.61.d
+    picture = GFX_report_event_american_hunger_march
+trigger = {
+has_completed_focus = ENG_vnes_sdelka_leo
+BEL = {
+			is_puppet_of = ENG
+			}
+tag = ENG
+ENG = {
+has_full_control_of_state = 6
+
+}
+ENG = {
+has_full_control_of_state = 34
+
+}
+}
+
+    option = {
+        name = ENG_britain.61.a
+		ENG = {
+BEL = { transfer_state = 34 }
+BEL = { transfer_state = 6 }
+}
+		}
+
+
+    }
+	
+	country_event = {
+    id = ENG_britain.63
+    title = ENG_britain.63.t
+    desc = ENG_britain.63.d
+    picture = GFX_report_event_FDR_speech
+	fire_only_once = yes
+	trigger = {
+	original_tag = ENG
+		country_exists = ENG
+
+	}
+    option = {
+	ai_chance = {	factor = 50	}
+        name = ENG_britain.63.a
+ENG = {
+set_country_flag = ENG_flag_discord
+}
+}
+
+option = {
+        name = ENG_britain.63.b
+		ai_chance = {	factor = 50	}
+ENG = {
+set_country_flag = ENG_flag_accord
+}
+}
+    }
+	
+	
+
+country_event = {
+    id = ENG_britain.62
+    title = ENG_britain.62.t
+    desc = ENG_britain.62.d
+    picture = GFX_report_event_american_hunger_march
+	 is_triggered_only = yes
+    option = {
+        name = ENG_britain.62.a
+	
+create_wargoal = {
+					type = take_state_focus
+					target = FRA
+					generator = { 15 }
+				
+		}
+}
+    }
+	
+		country_event = {
+    id = ENG_britain.64
+    title = ENG_britain.64.t
+    desc = ENG_britain.64.d
+    picture = GFX_report_event_FDR_speech
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+	original_tag = ENG
+		country_exists = ENG
+is_ai = yes
+	}
+    option = {
+   name = ENG_britain.64.a
+549 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 1
+										instant_build = yes
+									}
+}
+558 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 2
+										instant_build = yes
+									}
+
+}
+547 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 2
+										instant_build = yes
+									}
+
+}
+548 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 1
+										instant_build = yes
+									}
+
+}
+    }
+	}
+	

@@ -1,0 +1,69 @@
+﻿division_template = {
+	name = "Kazak Division"			# Cavalry Division
+
+	division_names_group = MON_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 0 y = 4 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+		division = {
+		name = "Kazak Division 2-nd"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 3568
+		division_template = "Kazak Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+		division = {
+		name = "Kazak Division 1-st"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 3568
+		division_template = "Kazak Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "Kazak Division 3-rd"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 3568
+		division_template = "Kazak Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "Kazak Division 4-th"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 3568
+		division_template = "Kazak Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+}
+

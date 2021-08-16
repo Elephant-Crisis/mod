@@ -1,0 +1,1208 @@
+﻿focus_tree = {
+	id = australian_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = AST
+
+		}
+	}
+	
+	default = no
+	
+
+	focus = {
+		id = AST_polit_debati1
+		icon = GFX_goal_generic_attack_allies
+		cost = 5
+		completion_reward = {
+		add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		x = 6
+		y = 0
+
+	}
+	focus = {
+		id = AST_polit_vopros_slaves
+		icon = GFX_goal_demand_sudetenland
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		
+		completion_reward = {
+		country_event = AST.4
+		
+		}
+		x = 17
+		y = 0
+
+	}
+	focus = {
+		id = AST_more_akademia
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5
+		completion_reward = {
+		navy_experience = 25
+		
+		}
+		x = 26
+		y = 0
+
+	}
+	focus = {
+		id = AST_voenka_legion
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5
+		completion_reward = {
+		army_experience = 15
+		}
+		x = 35
+		y = 0
+
+	}
+	focus = {
+		id = AST_vnesnaa_politka
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		available = {
+		has_completed_focus = AST_polit_oblik_slona
+		has_army_manpower = { size > 200000 }
+		}
+		completion_reward = {
+		add_political_power = 50
+		completion_reward = {
+		set_rule = { can_create_factions = yes }
+		news_event = news.513
+		}
+		}
+		ai_will_do = {
+		factor = 10
+		modifier = {
+		
+		has_army_manpower = { size > 200000 }
+		
+		
+		}
+		}
+		x = 24
+		
+		y = 4
+
+	}
+	focus = {
+		id = AST_polit_polozenie
+		icon = GFX_goal_generic_radar
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AST_polit_debati1
+		}
+		completion_reward = {
+					    add_timed_idea = {
+				idea = AST_polozenie
+				days = 180
+			}
+		
+		}
+		x = 6
+		y = 1
+
+	}
+	focus = {
+		id = AST_polit_ideali_slona
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AST_polit_polozenie
+		}
+		completion_reward = {
+		add_stability = 0.1
+		}
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = AST_polit_democraty
+		icon = GFX_goal_support_democracy
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AST_polit_ideali_slona
+		}
+		completion_reward = {
+		add_popularity = { ideology = democratic popularity = 0.05 }
+		add_political_power = -50
+		add_stability = 0.05
+		}
+		mutually_exclusive = {
+			focus = AST_polit_gvardia
+		}
+		x = 3
+		y = 3
+
+	}
+	focus = {
+		id = AST_polit_gvardia
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AST_polit_ideali_slona
+		}
+		mutually_exclusive = {
+			focus = AST_polit_democraty
+		}
+		completion_reward = {
+		add_war_support = 0.1
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		add_political_power = -50
+		}
+		x = 5
+		y = 3
+
+	}
+	focus = {
+		id = AST_polit_debati
+		icon = GFX_goal_generic_territory_or_war
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+						focus = AST_polit_democraty
+			focus = AST_polit_gvardia
+		}
+				mutually_exclusive = {
+			focus = AST_polit_viskazivanie
+		}
+		completion_reward = {
+		add_ideas = AST_debati_fasc
+		add_popularity = { ideology = fascism popularity = 0.1 }
+		}
+
+		cost = 5
+		x = 5
+		y = 4
+
+	}
+	focus = {
+		id = AST_polit_club
+		icon = GFX_goal_support_fascism
+		ai_will_do = {
+			factor = 10
+		}
+		cost = 5
+		prerequisite = {
+			focus = AST_polit_viskazivanie
+			focus = AST_polit_debati
+		}
+						mutually_exclusive = {
+			focus = AST_polit_oshibki
+		}
+		completion_reward = {
+		add_ideas = AST_club
+		add_war_support = 0.05
+		add_popularity = { ideology = fascism popularity = 0.1 }
+		}
+		x = 5
+		y = 5
+
+	}
+	focus = {
+		id = AST_polit_ass_we_can
+		icon = GFX_goal_generic_construction2
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AST_polit_polozenie
+		}
+		completion_reward = {
+					if = {
+				limit = {
+					NOT = { has_idea = war_economy }
+					NOT = { has_idea = tot_economic_mobilisation }
+				}
+				add_ideas = war_economy
+			}
+		}
+		x = 10
+		y = 2
+
+	}
+	focus = {
+		id = AST_polit_holland
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AST_polit_ass_we_can
+		}
+		completion_reward = {
+		add_state_core = 672
+		add_state_core = 334
+		add_state_core = 673
+		custom_effect_tooltip = AST_vosstanie_holland_1
+		}
+		ai_will_do = {
+		modifier = {
+		
+		has_stability > 0.55
+		
+		
+		}
+		}
+
+		x = 7
+		y = 3
+
+	}
+	focus = {
+		id = AST_polit_latex
+		icon = GFX_focus_generic_rubber
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AST_polit_holland
+		}
+		completion_reward = {
+							285 = {
+				add_resource = {
+					type = rubber
+					amount = 25
+				}
+			} 
+			random_owned_controlled_state = {
+				prioritize = { 285 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		
+		}
+		
+		x = 7
+		y = 4
+
+	}
+	focus = {
+		id = AST_polit_torgovla
+		icon = GFX_goal_generic_trade
+		cost = 5
+		prerequisite = {
+			focus = AST_polit_latex
+		}
+		completion_reward = {
+        add_ideas = AST_torgovla
+		}
+		x = 7
+		y = 5
+
+	}
+	focus = {
+		id = AST_polit_predateli
+		icon = GFX_goal_generic_small_arms
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AST_polit_ass_we_can
+		}
+		
+				completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
+		
+		
+		x = 10
+		y = 3
+
+	}
+	focus = {
+		id = AST_polit_monopolii
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 5
+		prerequisite = {
+			focus = AST_polit_predateli
+		}
+		completion_reward = {
+add_ideas = AST_monopolii
+		}
+		mutually_exclusive = {
+			focus = AST_polit_mal_biznes
+		}
+		x = 9
+		y = 4
+
+	}
+	focus = {
+		id = AST_polit_mal_biznes
+		icon = GFX_goal_generic_construct_civilian
+		cost = 5
+		prerequisite = {
+			focus = AST_polit_predateli
+		}
+		mutually_exclusive = {
+			focus = AST_polit_monopolii
+		}
+		completion_reward = {
+add_ideas = AST_biznes
+		}
+		x = 11
+		y = 4
+
+	}
+	focus = {
+		id = AST_polit_vost_economic
+		icon = GFX_goal_generic_consumer_goods
+		cost = 5
+		prerequisite = {
+			focus = AST_polit_monopolii
+			focus = AST_polit_mal_biznes
+		}
+		prerequisite = {
+			focus = AST_polit_torgovla
+		}
+		completion_reward = {
+		add_ideas = AST_economica
+		add_stability = 0.05
+		}
+		x = 10
+		y = 6
+
+	}
+	focus = {
+		id = AST_polit_dungeon_ohranka
+		icon = GFX_goal_generic_production2
+		cost = 5
+		prerequisite = {
+			focus = AST_polit_polozenie
+		}
+		completion_reward = {
+						add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = encryption_tech
+					category = decryption_tech
+				}
+				add_stability = 0.05
+		}
+		x = 13
+		y = 2
+
+	}
+	focus = {
+		id = AST_polit_dobrovolci
+		icon = GFX_focus_generic_manpower
+		cost = 5
+		prerequisite = {
+			focus = AST_polit_dungeon_ohranka
+		}
+				completion_reward = {
+			custom_effect_tooltip = AST_voiska
+			hidden_effect = {
+
+				division_template = {
+				name = "Leatherman division"
+				division_names_group = AST_INF_01
+				regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+		
+		        		infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+							}
+										support = {
+		artillery = { x = 0 y = 0 }
+	}
+						}
+		
+					random_owned_controlled_state = {
+							prioritize = { 285 }
+							create_unit = { 
+								division = "name = \"1. Leatherman division\" division_template = \"Leatherman division\" start_experience_factor = 0.3" 
+								owner = AST
+								}
+		
+					}
+										random_owned_controlled_state = {
+							prioritize = { 285 }
+							create_unit = { 
+								division = "name = \"1. Leatherman division\" division_template = \"Leatherman division\" start_experience_factor = 0.3" 
+								owner = AST
+								}
+		
+					}
+										random_owned_controlled_state = {
+							prioritize = { 285 }
+							create_unit = { 
+								division = "name = \"1. Leatherman division\" division_template = \"Leatherman division\" start_experience_factor = 0.3" 
+								owner = AST
+								}
+		
+					}
+										random_owned_controlled_state = {
+							prioritize = { 285 }
+							create_unit = { 
+								division = "name = \"1. Leatherman division\" division_template = \"Leatherman division\" start_experience_factor = 0.3" 
+								owner = AST
+								}
+		
+					}
+				}
+
+		}
+		x = 13
+		y = 3
+
+	}
+	focus = {
+		id = AST_polit_zad_liveram
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = AST_polit_dobrovolci
+		}
+		completion_reward = {
+		remove_ideas = AST_nadrat_zad #### Минус на тех, кто валит
+		
+		}
+		x = 13
+		y = 4
+
+	}
+	focus = {
+		id = AST_polit_ne_rabi
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+		available = {
+		has_country_flag = AST_flag_otmena
+		}
+		mutually_exclusive = {
+			focus = AST_polit_podavit
+		}
+		prerequisite = {
+			focus = AST_polit_vopros_slaves
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+		
+     remove_ideas = idea_AST_rabstvo
+     add_ideas = AST_ne_rabstvo
+
+}
+		x = 16
+		y = 1
+
+	}
+	focus = {
+		id = AST_polit_podavit
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		available = {
+		has_country_flag = AST_flag_rabi
+		}
+		mutually_exclusive = {
+			focus = AST_polit_ne_rabi
+		}
+		prerequisite = {
+			focus = AST_polit_vopros_slaves
+		}
+		
+		completion_reward = {
+		unlock_decision_tooltip = AST_podavit_slaves
+		}
+		x = 18
+		y = 1
+
+	}
+	focus = {
+		id = AST_polit_zemli
+		icon = GFX_goal_generic_position_armies
+		cost = 5
+		prerequisite = {
+			focus = AST_polit_ne_rabi
+		}
+		ai_will_do = {
+			factor = 12
+		}
+        completion_reward = {
+		swap_ideas = {
+     remove_idea = AST_ne_rabstvo
+     add_idea = AST_ne_rabstvo2
+}
+		
+		}
+		x = 16
+		y = 2
+
+	}
+	focus = {
+		id = AST_polit_lagera
+		icon = GFX_goal_generic_construction
+		cost = 5
+		prerequisite = {
+			focus = AST_polit_podavit
+		}
+		completion_reward = {
+		add_ideas = AST_rabstvo2
+		random_owned_controlled_state = {
+				prioritize = { 674 }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		x = 18
+		y = 2
+
+	}
+	focus = {
+		id = AST_polit_svoboda
+		icon = GFX_goal_support_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {
+			focus = AST_polit_zemli
+		}
+completion_reward = {
+		swap_ideas = {
+     remove_idea = AST_ne_rabstvo2
+     add_idea = AST_ne_rabstvo3
+}
+		
+		}
+		x = 16
+		y = 3
+
+	}
+	focus = {
+		id = AST_polit_svoboda_rabstvo
+		icon = GFX_goal_support_fascism
+		cost = 10
+		prerequisite = {
+			focus = AST_polit_lagera
+		}
+completion_reward = {
+
+     remove_ideas = idea_AST_rabstvo
+     add_ideas = AST_rabstvo3
+}
+		
+		
+		x = 18
+		y = 3
+
+	}
+	focus = {
+		id = AST_vnesnaa_ENG
+		icon = GFX_focus_AST_never_gallipoli
+		cost = 5
+		
+		prerequisite = {
+			focus = AST_vnesnaa_politka
+		}
+		available = {
+		NOT = {
+		is_in_faction_with = MAL
+		}
+		}
+		completion_reward = {
+		create_wargoal = {
+ 				type = take_state_focus
+ 				target = MAL
+ 				expire = 0
+ 				generator = { 333 }
+ 			}
+		}
+		x = 20
+		y = 5
+
+	}
+	focus = {
+		id = AST_more_disayni
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 5
+		prerequisite = {
+			focus = AST_more_akademia
+		}
+		
+		completion_reward = {
+		add_tech_bonus = {
+				name = AST_flot
+				bonus = 1.0
+				uses = 1
+				category = naval_doctrine	
+			}
+			}
+		
+		x = 23
+		y = 1
+
+	}
+	focus = {
+		id = AST_more_creyser
+		icon = GFX_goal_generic_navy_battleship
+		cost = 5
+		prerequisite = {
+			focus = AST_more_disayni
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				uses = 1
+				category = cl_tech
+			}
+		}
+		x = 21
+		y = 2
+
+	}
+	focus = {
+		id = AST_vnesnaa_tihiy_ocean
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 5
+		prerequisite = {
+			focus = AST_vnesnaa_politka
+		}
+		available = {
+is_in_faction = no
+
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_political_power = 100
+		create_faction = Gachisti1
+		set_rule = { can_create_factions = yes }
+		}
+		x = 24
+		y = 5
+
+	}
+	focus = {
+		id = AST_vnesnaa_soyuz_solnce
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		cost = 5
+		prerequisite = {
+			focus = AST_vnesnaa_tihiy_ocean
+		}
+		mutually_exclusive = {
+			focus = AST_vnesnaa_alk_tron
+		}
+		completion_reward = {
+		BUH = { country_event = generic.5 days = 30 }
+		}
+		x = 22
+		y = 6
+
+	}
+	focus = {
+		id = AST_more_podlodka
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 5
+		prerequisite = {
+			focus = AST_more_disayni
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
+		}
+		x = 23
+		y = 2
+
+	}
+	focus = {
+		id = AST_vnesnaa_alk_tron
+		icon = GFX_goal_generic_attack_allies
+		cost = 5
+		prerequisite = {
+			focus = AST_vnesnaa_tihiy_ocean
+		}
+		mutually_exclusive = {
+			focus = AST_vnesnaa_soyuz_solnce
+		}
+		completion_reward = {
+		create_wargoal = {
+ 				type = take_state_focus
+ 				target = BUH
+ 				expire = 0
+ 				generator = { 633 }
+ 			}
+		}
+		x = 24
+		y = 6
+
+	}
+	focus = {
+		id = AST_vnesnaa_FRA
+		icon = GFX_goal_generic_political_pressure
+		cost = 5
+		prerequisite = {
+			focus = AST_vnesnaa_alk_tron
+			focus = AST_vnesnaa_soyuz_solnce
+		}
+		available = {
+		NOT = {
+		is_in_faction_with = FRA
+		}
+		}
+		completion_reward = {
+		add_named_threat = { threat = 5 name = AST_indochina }
+		custom_effect_tooltip = AST_otkaz_FRA
+		FRA = { country_event = france_event.4 days = 5 }
+		
+}
+		x = 24
+		y = 7
+
+	}
+	focus = {
+		id = AST_more_linkori
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 5
+		prerequisite = {
+			focus = AST_more_disayni
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+			}
+		}
+		x = 25
+		y = 2
+
+	}
+	focus = {
+		id = AST_vnesnaa_madias
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 5
+		prerequisite = {
+			focus = AST_vnesnaa_tihiy_ocean
+		}
+		available = {
+		NOT = {
+		is_in_faction_with = PHI
+		}
+		}
+		completion_reward = {
+		create_wargoal = {
+ 				type = take_state_focus
+ 				target = PHI
+ 				expire = 0
+ 				generator = { 627 }
+ 			}
+		}
+		x = 26
+		y = 6
+
+	}
+	focus = {
+		id = AST_more_masters_of_sea
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 5
+		prerequisite = {
+			focus = AST_more_akademia
+		}
+		completion_reward = {
+		
+		add_tech_bonus = {
+				name = ENG_marines_and_landing_craft
+				bonus = 1.0
+				uses = 1
+				category = marine_tech
+
+			}
+			add_tech_bonus = {
+				name = ENG_marines_and_landing_craft
+				bonus = 1.0
+				uses = 1
+				category = tp_tech
+			}
+			}
+		x = 29
+		y = 1
+
+	}
+	focus = {
+		id = AST_more_india
+		icon = GFX_focus_RAJ_british_investors
+		cost = 5
+		prerequisite = {
+			focus = AST_more_masters_of_sea
+		}
+		available = {
+		NOT = {
+		is_in_faction_with = RAJ
+		}
+		}
+		completion_reward = {
+		add_political_power = 70
+		add_war_support = 0.05
+		add_timed_idea = {
+				idea = AST_more_Indian
+				days = 365
+			}
+		news_event = news.512
+		}
+		x = 27
+		y = 2
+
+	}
+	focus = {
+		id = AST_vnesnaa_India
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 5
+		prerequisite = {
+			focus = AST_vnesnaa_politka
+		}
+		available = {
+		NOT = {
+		is_in_faction_with = RAJ
+		}
+		}
+		completion_reward = {
+		create_wargoal = {
+ 				type = take_state_focus
+ 				target = RAJ
+ 				expire = 0
+ 				generator = { 422 }
+ 			}
+		
+		}
+		x = 28
+		y = 5
+
+	}
+	focus = {
+		id = AST_vnesnaa_India2
+		icon = GFX_focus_RAJ_seek_help_from_germany
+		cost = 5
+		prerequisite = {
+			focus = AST_vnesnaa_India
+		}
+		available = {
+		controls_state = 422
+		}
+		completion_reward = {
+		add_state_core = 422
+		}
+		x = 28
+		y = 6
+
+	}
+	#focus = {
+	#	id = AST_vnesnaa_India3
+	#	icon = GFX_goal_unknown
+	#	cost = 5
+	#	prerequisite = {
+	#		focus = AST_vnesnaa_India2
+	#	}
+	#	x = 28
+	#	y = 7
+#
+#	}
+	focus = {
+		id = AST_more_china
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = AST_more_masters_of_sea
+		}
+		available = {
+		NOT = {
+		is_in_faction_with = CHI
+		is_in_faction_with = GXC
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
+		}
+		x = 29
+		y = 2
+
+	}
+	focus = {
+		id = AST_more_japan
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = AST_more_masters_of_sea
+		}
+		available = {
+		NOT = {
+		is_in_faction_with = BUH
+		is_in_faction_with = EMP
+		}
+		}
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		x = 31
+		y = 2
+
+	}
+	focus = {
+		id = AST_voenka_forma
+		icon = GFX_goal_generic_army_doctrines
+		cost = 5
+		prerequisite = {
+			focus = AST_voenka_legion
+		}
+				completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+		x = 33
+		y = 1
+
+	}
+	focus = {
+		id = AST_voenka_pushki
+		icon = GFX_goal_generic_army_artillery
+		cost = 5
+		prerequisite = {
+			focus = AST_voenka_forma
+		}
+		completion_reward = {
+						add_tech_bonus = {
+					name = infantry_artillery_bonus #@#
+					bonus = 1.0
+					uses = 1
+					category = infantry_weapons
+					category = artillery
+				}
+				}
+		
+		x = 33
+		y = 2
+
+	}
+	focus = {
+		id = AST_voenka_boys
+		icon = GFX_goal_generic_propaganda
+		cost = 5
+		prerequisite = {
+			focus = AST_voenka_legion
+		}
+		completion_reward = {
+		add_ideas = AST_boys
+		}
+		x = 35
+		y = 1
+
+	}
+	focus = {
+		id = AST_voenka_gachisti
+		icon = GFX_goal_generic_military_sphere
+		cost = 5
+		prerequisite = {
+			focus = AST_voenka_boys
+		}
+		completion_reward = {
+		add_stability = -0.05
+		add_war_support = 0.05
+		}
+		x = 35
+		y = 2
+
+	}
+	focus = {
+		id = AST_polit_viskazivanie
+		icon = GFX_goal_generic_propaganda
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AST_polit_democraty
+			focus = AST_polit_gvardia
+		}
+								mutually_exclusive = {
+			focus = AST_polit_debati
+		}
+		completion_reward = {
+		add_ideas = AST_viskazivanie
+		add_popularity = { ideology = democratic popularity = 0.1 }
+		}
+		x = 3
+		y = 4
+
+	}
+	focus = {
+		id = AST_polit_oshibki
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AST_polit_viskazivanie
+			focus = AST_polit_debati
+		}
+										mutually_exclusive = {
+			focus = AST_polit_club
+		}
+		completion_reward = {
+		add_popularity = { ideology = democratic popularity = 0.1 }
+		add_ideas = AST_oshibki
+		add_stability = 0.1
+		}
+		x = 3
+		y = 5
+
+	}
+	focus = {
+		id = AST_polit_oblik_slona
+		icon = GFX_slon
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = AST_polit_oshibki
+			focus = AST_polit_club
+		}
+		        completion_reward = {
+        add_research_slot = 1
+    }
+		x = 4
+		y = 6
+
+	}
+	focus = {
+		id = AST_voenka_tanki
+		icon = GFX_goal_generic_army_tanks
+		cost = 5
+		prerequisite = {
+			focus = AST_voenka_legion
+		}
+	
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+		
+		x = 37
+		y = 1
+
+	}
+	focus = {
+		id = AST_voenka_samoleti
+		icon = GFX_goal_generic_build_airforce
+		cost = 5
+		prerequisite = {
+			focus = AST_voenka_tanki
+		}
+		
+		completion_reward = {
+					add_tech_bonus = {
+				name = fighter_command
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+		
+		}
+		x = 37
+		y = 2
+
+	}
+	focus = {
+		id = AST_vnesnaa_USA
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+		prerequisite = {
+			focus = AST_vnesnaa_FRA
+		}
+		available = {
+		NOT = {
+		is_in_faction_with = USA
+		}
+		}
+		completion_reward = {
+		create_wargoal = {
+ 				type = take_state_focus
+ 				target = USA
+ 				expire = 0
+ 				generator = { 627 }
+ 			}
+		}
+		x = 24
+		y = 8
+
+	}
+}

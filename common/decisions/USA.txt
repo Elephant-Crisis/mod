@@ -1,0 +1,1981 @@
+USA_torg_prestavitelstvo = {
+
+	USA_cuba_torg_predstavitelstvo = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			has_completed_focus = USA_vnesneya_torg_prestavitelstvo
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        CUB = {
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                CUB = {
+						}
+				
+				}
+				CUB = {
+					
+					add_ideas = USA_torg_zavisimost_mal
+				}
+			}
+			}
+		
+
+		}
+		
+		USA_cuba_torg_predstavitelstvo2 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        CUB = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        CUB = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                CUB = {
+						}
+				
+				}
+				CUB = {
+					remove_ideas = USA_torg_zavisimost_mal
+					add_ideas = USA_torg_zavisimost_sred
+				}
+			}
+			}
+		
+
+		}
+		
+				USA_cuba_torg_predstavitelstvo3 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        CUB = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        CUB = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                CUB = {
+						}
+				
+				}
+				CUB = {
+					remove_ideas = USA_torg_zavisimost_sred
+					add_ideas = USA_torg_zavisimost_bolsh
+				}
+			}
+			}
+		
+
+		}
+		
+						USA_cuba_torg_predstavitelstvo4 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        CUB = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        CUB = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                CUB = {
+						}
+				
+				}
+			    puppet = CUB
+				
+				
+
+				}
+			}
+			}
+			
+			
+			
+			
+			USA_GUA_torg_predstavitelstvo = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			has_completed_focus = USA_vnesneya_torg_prestavitelstvo
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        GUA = {
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                GUA = {
+						}
+				
+				}
+				GUA = {
+					
+					add_ideas = USA_torg_zavisimost_mal
+				}
+			}
+			}
+		
+
+		}
+		
+		USA_GUA_torg_predstavitelstvo2 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        GUA = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        GUA = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                GUA = {
+						}
+				
+				}
+				GUA = {
+					remove_ideas = USA_torg_zavisimost_mal
+					add_ideas = USA_torg_zavisimost_sred
+				}
+			}
+			}
+		
+
+		}
+		
+				USA_GUA_torg_predstavitelstvo3 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        GUA = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        GUA = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                GUA = {
+						}
+				
+				}
+				GUA = {
+					remove_ideas = USA_torg_zavisimost_sred
+					add_ideas = USA_torg_zavisimost_bolsh
+				}
+			}
+			}
+		
+
+		}
+		
+						USA_GUA_torg_predstavitelstvo4 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        GUA = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        GUA = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                GUA = {
+						}
+				
+				}
+			    puppet = GUA
+				
+				
+
+				}
+			}
+			}
+			
+			
+			USA_ELS_torg_predstavitelstvo = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			has_completed_focus = USA_vnesneya_torg_prestavitelstvo
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        ELS = {
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                ELS = {
+						}
+				
+				}
+				ELS = {
+					
+					add_ideas = USA_torg_zavisimost_mal
+				}
+			}
+			}
+		
+
+		}
+		
+		USA_ELS_torg_predstavitelstvo2 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        ELS = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        ELS = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                ELS = {
+						}
+				
+				}
+				ELS = {
+					remove_ideas = USA_torg_zavisimost_mal
+					add_ideas = USA_torg_zavisimost_sred
+				}
+			}
+			}
+		
+
+		}
+		
+				USA_ELS_torg_predstavitelstvo3 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        ELS = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        ELS = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                ELS = {
+						}
+				
+				}
+				ELS = {
+					remove_ideas = USA_torg_zavisimost_sred
+					add_ideas = USA_torg_zavisimost_bolsh
+				}
+			}
+			}
+		
+
+		}
+		
+						USA_ELS_torg_predstavitelstvo4 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        ELS = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        ELS = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                ELS = {
+						}
+				
+				}
+			    puppet = ELS
+				
+				
+
+				}
+			}
+			}
+		
+		
+					USA_HON_torg_predstavitelstvo = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			has_completed_focus = USA_vnesneya_torg_prestavitelstvo
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        HON = {
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                HON = {
+						}
+				
+				}
+				HON = {
+					
+					add_ideas = USA_torg_zavisimost_mal
+				}
+			}
+			}
+		
+
+		}
+		
+		USA_HON_torg_predstavitelstvo2 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        HON = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        HON = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                HON = {
+						}
+				
+				}
+				HON = {
+					remove_ideas = USA_torg_zavisimost_mal
+					add_ideas = USA_torg_zavisimost_sred
+				}
+			}
+			}
+		
+
+		}
+		
+				USA_HON_torg_predstavitelstvo3 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        HON = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        HON = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                HON = {
+						}
+				
+				}
+				HON = {
+					remove_ideas = USA_torg_zavisimost_sred
+					add_ideas = USA_torg_zavisimost_bolsh
+				}
+			}
+			}
+		
+
+		}
+		
+						USA_HON_torg_predstavitelstvo4 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        HON = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        HON = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                HON = {
+						}
+				
+				}
+			    puppet = HON
+				
+				
+
+				}
+			}
+			}
+		
+		
+		
+							USA_NIC_torg_predstavitelstvo = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			has_completed_focus = USA_vnesneya_torg_prestavitelstvo
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        NIC = {
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                NIC = {
+						}
+				
+				}
+				NIC = {
+					
+					add_ideas = USA_torg_zavisimost_mal
+				}
+			}
+			}
+		
+
+		}
+		
+		USA_NIC_torg_predstavitelstvo2 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        NIC = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        NIC = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                NIC = {
+						}
+				
+				}
+				NIC = {
+					remove_ideas = USA_torg_zavisimost_mal
+					add_ideas = USA_torg_zavisimost_sred
+				}
+			}
+			}
+		
+
+		}
+		
+				USA_NIC_torg_predstavitelstvo3 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        NIC = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        NIC = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                NIC = {
+						}
+				
+				}
+				NIC = {
+					remove_ideas = USA_torg_zavisimost_sred
+					add_ideas = USA_torg_zavisimost_bolsh
+				}
+			}
+			}
+		
+
+		}
+		
+						USA_NIC_torg_predstavitelstvo4 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        NIC = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        NIC = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                NIC = {
+						}
+				
+				}
+			    puppet = NIC
+				
+				
+
+				}
+			}
+			}
+
+
+		
+		
+		
+		
+		USA_COS_torg_predstavitelstvo = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			has_completed_focus = USA_vnesneya_torg_prestavitelstvo
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        COS = {
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                COS = {
+						}
+				
+				}
+				COS = {
+					
+					add_ideas = USA_torg_zavisimost_mal
+				}
+			}
+			}
+		
+
+		}
+		
+		USA_COS_torg_predstavitelstvo2 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        COS = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        COS = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                COS = {
+						}
+				
+				}
+				COS = {
+					remove_ideas = USA_torg_zavisimost_mal
+					add_ideas = USA_torg_zavisimost_sred
+				}
+			}
+			}
+		
+
+		}
+		
+				USA_COS_torg_predstavitelstvo3 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        COS = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        COS = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                COS = {
+						}
+				
+				}
+				COS = {
+					remove_ideas = USA_torg_zavisimost_sred
+					add_ideas = USA_torg_zavisimost_bolsh
+				}
+			}
+			}
+		
+
+		}
+		
+						USA_COS_torg_predstavitelstvo4 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        COS = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        COS = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                COS = {
+						}
+				
+				}
+			    puppet = COS
+				
+				
+
+				}
+			}
+	}
+	
+	
+	USA_PAN_torg_predstavitelstvo = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			has_completed_focus = USA_vnesneya_torg_prestavitelstvo
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        PAN = {
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                PAN = {
+						}
+				
+				}
+				PAN = {
+					
+					add_ideas = USA_torg_zavisimost_mal
+				}
+			}
+			}
+		
+
+		}
+		
+		USA_PAN_torg_predstavitelstvo2 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        PAN = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        PAN = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                PAN = {
+						}
+				
+				}
+				PAN = {
+					remove_ideas = USA_torg_zavisimost_mal
+					add_ideas = USA_torg_zavisimost_sred
+				}
+			}
+			}
+		
+
+		}
+		
+				USA_PAN_torg_predstavitelstvo3 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        PAN = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        PAN = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                PAN = {
+						}
+				
+				}
+				PAN = {
+					remove_ideas = USA_torg_zavisimost_sred
+					add_ideas = USA_torg_zavisimost_bolsh
+				}
+			}
+			}
+		
+
+		}
+		
+						USA_PAN_torg_predstavitelstvo4 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        PAN = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        PAN = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                PAN = {
+						}
+				
+				}
+			    puppet = PAN
+				
+				
+
+				}
+			}
+	}
+	
+	
+	
+	USA_HAI_torg_predstavitelstvo = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			has_completed_focus = USA_vnesneya_torg_prestavitelstvo
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        HAI = {
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                HAI = {
+						}
+				
+				}
+				HAI = {
+					
+					add_ideas = USA_torg_zavisimost_mal
+				}
+			}
+			}
+		
+
+		}
+		
+		USA_HAI_torg_predstavitelstvo2 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        HAI = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        HAI = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                HAI = {
+						}
+				
+				}
+				HAI = {
+					remove_ideas = USA_torg_zavisimost_mal
+					add_ideas = USA_torg_zavisimost_sred
+				}
+			}
+			}
+		
+
+		}
+		
+				USA_HAI_torg_predstavitelstvo3 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        HAI = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        HAI = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                HAI = {
+						}
+				
+				}
+				HAI = {
+					remove_ideas = USA_torg_zavisimost_sred
+					add_ideas = USA_torg_zavisimost_bolsh
+				}
+			}
+			}
+		
+
+		}
+		
+						USA_HAI_torg_predstavitelstvo4 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        HAI = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        HAI = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                HAI = {
+						}
+				
+				}
+			    puppet = HAI
+				
+				
+
+				}
+			}
+	}
+	
+	
+		USA_DOM_torg_predstavitelstvo = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			has_completed_focus = USA_vnesneya_torg_prestavitelstvo
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        DOM = {
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                DOM = {
+						}
+				
+				}
+				DOM = {
+					
+					add_ideas = USA_torg_zavisimost_mal
+				}
+			}
+			}
+		
+
+		}
+		
+		USA_DOM_torg_predstavitelstvo2 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        DOM = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        DOM = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                DOM = {
+						}
+				
+				}
+				DOM = {
+					remove_ideas = USA_torg_zavisimost_mal
+					add_ideas = USA_torg_zavisimost_sred
+				}
+			}
+			}
+		
+
+		}
+		
+				USA_DOM_torg_predstavitelstvo3 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        DOM = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        DOM = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                DOM = {
+						}
+				
+				}
+				DOM = {
+					remove_ideas = USA_torg_zavisimost_sred
+					add_ideas = USA_torg_zavisimost_bolsh
+				}
+			}
+			}
+		
+
+		}
+		
+						USA_DOM_torg_predstavitelstvo4 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        DOM = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        DOM = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+		fire_only_once = yes
+		days_remove = 30
+		cost = 40
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                DOM = {
+						}
+				
+				}
+			    puppet = DOM
+				
+				
+
+				}
+			}
+	}
+	
+	
+	
+	USA_MEX_torg_predstavitelstvo = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			has_completed_focus = USA_vnesneya_Mexico
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+        MEX = {
+		}
+		}
+		fire_only_once = yes
+		days_remove = 60
+		cost = 100
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                MEX = {
+						}
+				
+				}
+				MEX = {
+					
+					add_ideas = USA_torg_zavisimost_mal
+				}
+			}
+			}
+		
+
+		}
+		
+		USA_MEX_torg_predstavitelstvo2 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        MEX = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+        MEX = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+		fire_only_once = yes
+		days_remove = 60
+		cost = 100
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                MEX = {
+						}
+				
+				}
+				MEX = {
+					remove_ideas = USA_torg_zavisimost_mal
+					add_ideas = USA_torg_zavisimost_sred
+				}
+			}
+			}
+		
+
+		}
+		
+				USA_MEX_torg_predstavitelstvo3 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        MEX = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+        MEX = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+		fire_only_once = yes
+		days_remove = 60
+		cost = 100
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                MEX = {
+						}
+				
+				}
+				MEX = {
+					remove_ideas = USA_torg_zavisimost_sred
+					add_ideas = USA_torg_zavisimost_bolsh
+				}
+			}
+			}
+		
+
+		}
+		
+						USA_MEX_torg_predstavitelstvo4 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        MEX = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		visible = {
+        MEX = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+		fire_only_once = yes
+		days_remove = 60
+		cost = 100
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                MEX = {
+						}
+				
+				}
+			    puppet = MEX
+				
+				
+
+				}
+			}
+	}
+		
+		
+		
+		USA_BRA_torg_predstavitelstvo = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			has_completed_focus = USA_vnesneya_Brazilia
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        BRA = {
+		}
+		}
+		fire_only_once = yes
+		days_remove = 50
+		cost = 100
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                BRA = {
+						}
+				
+				}
+				BRA = {
+					
+					add_ideas = USA_torg_zavisimost_mal
+				}
+			}
+			}
+		
+
+		}
+		
+		USA_BRA_torg_predstavitelstvo2 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        BRA = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        BRA = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+		fire_only_once = yes
+		days_remove = 50
+		cost = 100
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                BRA = {
+						}
+				
+				}
+				BRA = {
+					remove_ideas = USA_torg_zavisimost_mal
+					add_ideas = USA_torg_zavisimost_sred
+				}
+			}
+			}
+		
+
+		}
+		
+				USA_BRA_torg_predstavitelstvo3 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        BRA = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        BRA = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+		fire_only_once = yes
+		days_remove = 50
+		cost = 100
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                BRA = {
+						}
+				
+				}
+				BRA = {
+					remove_ideas = USA_torg_zavisimost_sred
+					add_ideas = USA_torg_zavisimost_bolsh
+				}
+			}
+			}
+		
+
+		}
+		
+						USA_BRA_torg_predstavitelstvo4 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        BRA = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        BRA = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+		fire_only_once = yes
+		days_remove = 50
+		cost = 100
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                BRA = {
+						}
+				
+				}
+			    puppet = BRA
+				
+				
+
+				}
+			}
+	}
+	
+			USA_ARG_torg_predstavitelstvo = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			has_completed_focus = USA_vnesneya_Argentina
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        ARG = {
+		}
+		}
+		fire_only_once = yes
+		days_remove = 50
+		cost = 100
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                ARG = {
+						}
+				
+				}
+				ARG = {
+					
+					add_ideas = USA_torg_zavisimost_mal
+				}
+			}
+			}
+		
+
+		}
+		
+		USA_ARG_torg_predstavitelstvo2 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        ARG = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        ARG = {
+		has_idea = USA_torg_zavisimost_mal
+		}
+		}
+		fire_only_once = yes
+		days_remove = 50
+		cost = 100
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                ARG = {
+						}
+				
+				}
+				ARG = {
+					remove_ideas = USA_torg_zavisimost_mal
+					add_ideas = USA_torg_zavisimost_sred
+				}
+			}
+			}
+		
+
+		}
+		
+				USA_ARG_torg_predstavitelstvo3 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        ARG = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        ARG = {
+		has_idea = USA_torg_zavisimost_sred
+		}
+		}
+		fire_only_once = yes
+		days_remove = 50
+		cost = 100
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                ARG = {
+						}
+				
+				}
+				ARG = {
+					remove_ideas = USA_torg_zavisimost_sred
+					add_ideas = USA_torg_zavisimost_bolsh
+				}
+			}
+			}
+		
+
+		}
+		
+						USA_ARG_torg_predstavitelstvo4 = {
+
+		allowed = {
+			original_tag = USA
+		}
+
+		available = {
+			        ARG = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		visible = {
+        ARG = {
+		has_idea = USA_torg_zavisimost_bolsh
+		}
+		}
+		fire_only_once = yes
+		days_remove = 50
+		cost = 100
+		remove_effect = {
+		       
+					if = {
+				limit = {
+                ARG = {
+						}
+				
+				}
+			    puppet = ARG
+				
+				
+
+				}
+			}
+	}
+		
+		
+	}
+}

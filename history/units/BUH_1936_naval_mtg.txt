@@ -1,0 +1,54 @@
+﻿units= {
+
+	##### Naval OOB #####
+	fleet = {
+		name = "Armada BSU"			
+		naval_base = 9859 # 
+		task_force = {
+			name = "Armada BSU"
+			location = 9859 # 
+			ship = { name = "Sendai" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = {amount = 1 owner = BUH version_name = "Sendai Class"} } }
+
+		}
+task_force = {
+			name = "1 Sensui Sentai" # A part of "Dai 1 Kantai"
+			location = 9859  #Yokosuka
+			#Kaidai-class Submarines
+			ship = { name = "I-51" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_1 = {amount = 1 owner = BUH version_name = "Kaidai III Class"} } }
+			ship = { name = "I-152" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_1 = {amount = 1 owner = BUH version_name = "Kaidai III Class"} } }		
+			ship = { name = "I-153" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_1 = {amount = 1 owner = BUH version_name = "Kaidai III Class"} } }			
+			ship = { name = "I-154" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_1 = {amount = 1 owner = BUH version_name = "Kaidai III Class"} } }	
+			ship = { name = "I-155" definition = submarine start_experience_factor = 0.25 equipment = { ship_hull_submarine_1 = {amount = 1 owner = BUH version_name = "Kaidai III Class"} } }	
+
+		}		
+		task_force = {	
+			name = "2 Kantai"
+			location = 9859  #Sasebo
+			#Dai 5 Sentai
+			ship = { name = "Haguro" definition = heavy_cruiser start_experience_factor = 0.5 equipment = { ship_hull_cruiser_2 = {amount = 1 owner = BUH version_name = "Myoko Class"} } }	
+			ship = { name = "Nachi" definition = heavy_cruiser start_experience_factor = 0.5 equipment = { ship_hull_cruiser_2 = {amount = 1 owner = BUH version_name = "Myoko Class"} } }
+			ship = { name = "Myoko" definition = heavy_cruiser start_experience_factor = 0.5 equipment = { ship_hull_cruiser_2 = {amount = 1 owner = BUH version_name = "Myoko Class"} } }
+			ship = { name = "Ashigara" definition = heavy_cruiser start_experience_factor = 0.5 equipment = { ship_hull_cruiser_2 = {amount = 1 owner = BUH version_name = "Myoko Class"} } }
+			ship = { name = "Atago" definition = heavy_cruiser start_experience_factor = 0.5 equipment = { ship_hull_cruiser_2 = {amount = 1 owner = BUH version_name = "Myoko Class"} } }
+			#Dai 7 Sentai
+			ship = { name = "Aoba" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = {amount = 1 owner = BUH version_name = "Aoba Class"} } }
+			ship = { name = "Kinugasa" definition = heavy_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = {amount = 1 owner = BUH version_name = "Aoba Class"} } }
+		}
+		task_force = {	
+			name = "2 Suirai Sentai" #A part of "Dai 2 Kantai"
+			location = 9859  #Sasebo
+			#Flagship
+			ship = { name = "Naka" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = {amount = 1 owner = BUH version_name = "Sendai Class"} } }
+			#Dai 6 Kuchikutai, Type III Fubuki-class destroyers
+			ship = { name = "Akatsuki" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 owner = BUH version_name = "Fubuki Class"} } }
+			ship = { name = "Hibiki" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 owner = BUH version_name = "Fubuki Class"} } }		
+			ship = { name = "Fubuki" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 owner = BUH version_name = "Fubuki Class"} } }		
+			ship = { name = "Shinonome" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 owner = BUH version_name = "Fubuki Class"} } }
+			ship = { name = "Isonami" definition = destroyer start_experience_factor = 0.5 equipment = { ship_hull_light_1 = {amount = 1 owner = BUH version_name = "Fubuki Class"} } }
+			#Dai 28 Kuchikutai
+			ship = { name = "Asanagi" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = BUH version_name = "Mutsuki Class"} } }
+			ship = { name = "Yunagi" definition = destroyer equipment = { ship_hull_light_1 = {amount = 1 owner = BUH version_name = "Mutsuki Class"} } }
+		}
+	}
+} 
+

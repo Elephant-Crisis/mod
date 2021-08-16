@@ -1,0 +1,39 @@
+﻿###########################
+# Australia Events
+###########################
+
+#### RED ELEPHANT НЕ УДАЛЯЙ!!!
+add_namespace = SPA_spain
+country_event = {
+    id = SPA_spain.1
+    title = SPA_spain.1.t
+    desc = SPA_spain.1.d
+	
+    picture = GFX_report_event_spr_occupation_of_tangiers
+is_triggered_only = yes
+fire_only_once = yes
+    option = {
+	
+        name = SPA_spain.1.a  
+		add_war_support = -0.1
+SPA = {
+ENG = { transfer_state = 177 }
+}
+ai_chance = {	factor = 90	}		
+}
+
+option = {
+        name = SPA_spain.1.b
+		ai_chance = {	factor = 10	}
+		add_war_support = 0.1
+SPA = {
+ENG = { transfer_state = 177 }
+}
+create_wargoal = {
+					target = ENG
+					type = take_state_focus
+					generator = { 177 }
+				}
+}
+
+}

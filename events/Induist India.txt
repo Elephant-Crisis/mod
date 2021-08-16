@@ -1,0 +1,34 @@
+﻿###########################
+# Induist India Events
+###########################
+
+	add_namespace = IND_india
+	country_event = {
+	id = IND_india.1
+	title = IND_india.1.t
+	desc = IND_india.1.d
+	picture = GFX_report_event_dutch_soldiers_indonesia
+is_triggered_only = yes
+		
+	
+	option = { # Accept demands
+		name = IND_india.1.a
+		ai_chance = {	factor = 65	}
+		hidden_effect = {
+	    RAJ = { country_event = { id = RAJ_annex.1 }
+		
+		annex_country = { target = IND }
+		}
+		
+		
+	}
+	}
+	option = { # Accept demands
+		name = IND_india.1.b
+		ai_chance = { factor = 35	}
+		hidden_effect = {
+		RAJ = { country_event = { id = RAJ_india_otkaz.2 } }
+		}
+	}
+	}
+	

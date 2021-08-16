@@ -1,0 +1,267 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = news
+
+
+news_event = {
+	id = news.500
+	title = news.500.t
+	desc = news.500.d
+	picture = GFX_news_event_generic_read_write
+	
+	major = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	
+	option = {
+		name = news.500.a
+		trigger = {
+		}
+	}
+
+}
+news_event = {
+	id = news.501
+	title = news.501.t
+	desc = news.501.d
+	picture = GFX_news_event_generic_read_write
+	
+	major = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	
+	option = {
+		name = news.501.a
+		trigger = {
+		}
+	}
+
+}
+news_event = {
+	id = news.502
+	title = news.502.t
+	desc = news.502.d
+	picture = GFX_news_event_generic_usa_treaty
+	
+	major = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	
+	option = {
+		name = news.502.a
+		trigger = {
+		}
+	}
+
+}
+news_event = {
+	id = news.503
+	title = news.503.t
+	desc = news.503.d
+	picture = GFX_news_event_generic_read_write
+	
+	major = yes
+	is_triggered_only = yes
+	trigger = {
+
+	}
+	
+	option = {
+		name = news.503.a
+		trigger = {
+		}
+	}
+
+}
+
+
+news_event = {
+	id = news.505
+	title = news.505.t
+	desc = news.505.d
+	picture = GFX_news_event_soldiers_marching
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.505.a
+		trigger = {
+		}
+	}
+
+}
+
+news_event = {
+	id = news.506
+	title = news.506.t
+	desc = news.506.d
+	picture = GFX_news_event_eng_decolonization
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.506.a
+		trigger = {
+		}
+	}
+
+}
+news_event = {
+	id = news.507
+	title = news.507.t
+	desc = news.507.d
+	picture = GFX_news_event_eng_decolonization
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.507.a
+		trigger = {
+		}
+	}
+
+}
+
+news_event = {
+	id = news.508
+	title = news.508.t
+	desc = news.508.d
+	picture = GFX_news_event_eng_decolonization
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.508.a
+		trigger = {
+		}
+	}
+
+}
+news_event = {
+	id = news.504
+	title = news.504.t
+	desc = news.504.d
+	picture = GFX_news_event_eng_imperial_conference
+	major = yes
+	immediate = {
+	set_global_flag = ENG_premier_ministr
+	}
+	trigger = {
+		date < 1936.1.3
+		country_exists = ENG
+		NOT = { has_global_flag = ENG_premier_ministr }
+	}
+	option = {
+		name = news.504.a
+	}
+
+}
+
+news_event = {
+	id = news.509
+	title = news.509.t
+	desc = news.509.d
+	picture = GFX_news_event_generic_usa_treaty
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.509.a
+		trigger = {
+		}
+	}
+
+}
+news_event = {
+	id = news.510
+	title = news.510.t
+	desc = news.510.d
+	picture = GFX_news_event_ast_navy
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.510.a
+		trigger = {
+		}
+	}
+
+}
+news_event = {
+	id = news.511
+	title = news.511.t
+	desc = news.511.d
+	picture = GFX_news_event_ast_navy
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.511.a
+		trigger = {
+		}
+	}
+
+}
+news_event = {
+	id = news.512
+	title = news.512.t
+	desc = news.512.d
+	picture = GFX_news_event_ast_navy
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.512.a
+		trigger = {
+		}
+	}
+
+}
+
+news_event = {
+	id = news.513
+	title = news.513.t
+	desc = news.513.d
+	picture = GFX_news_event_053
+	major = yes
+	immediate = {
+		set_global_flag = AST_pasta_voyna
+	}
+	trigger = {
+		AST = { has_war = yes }
+		NOT = { has_global_flag = AST_pasta_voyna }
+		}
+		mean_time_to_happen = {
+days = 1
+}
+	option = {
+		name = news.513.a
+	}
+}
+
+news_event = {
+	id = news.514
+	title = news.514.t
+	desc = news.514.d
+	picture = GFX_news_event_german_soldiers
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.514.a
+		trigger = {
+		}
+	}
+}
+news_event = {
+	id = news.515
+	title = news.515.t
+	desc = news.515.d
+	picture = GFX_news_event_016
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.515.a
+		trigger = {
+		}
+	}
+}

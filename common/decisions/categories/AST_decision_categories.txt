@@ -1,0 +1,12 @@
+################
+##### AST ######
+################
+
+AST_vosstanie_holland = {
+	
+	allowed = {
+		original_tag = AST
+		
+	}
+}
+

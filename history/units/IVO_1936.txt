@@ -1,0 +1,84 @@
+﻿division_template = {
+	name = "Division of Africa"		# Infantry Division
+	division_names_group = CAR_INF_01
+	# Note: each regiment could also mobilize a 3rd battalion if called up
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+}
+division_template = { 
+	name = "Division"		# Elite light infantry, always fully mobilized w best equipment
+	division_names_group = CAR_CAC_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+
+units = {
+	###### Exército Portugues #####
+	# Governo Militar Portugues #
+	division = {
+		name = "African Division"
+		location = 10803
+		division_template = "Division of Africa"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+
+	}
+division = {
+		name = "African Division"
+		location = 10803
+		division_template = "Division of Africa"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "African Division"
+		location = 10803
+		division_template = "Division of Africa"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "African Division"
+		location = 10803
+		division_template = "Division of Africa"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+
+	}
+	division = {
+		name = "African Division"
+		location = 10803
+		division_template = "Division of Africa"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+
+	}
+
+}
+
+### Aeronáutica Militar ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "CAR"
+		}
+		requested_factories = 1
+		progress = 0.47
+		efficiency = 100
+	}
+
+}

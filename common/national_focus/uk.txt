@@ -1,0 +1,2078 @@
+focus_tree = {
+	id = uk
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ENG
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1650 }
+	default = no
+	focus = {
+		id = ENG_vnes_march
+		icon = GFX_goal_generic_position_armies
+		cost = 5
+		x = 5
+		y = 0
+		ai_will_do = {
+			factor = 10
+		}
+				completion_reward = {
+						add_political_power = 50
+						add_war_support = 0.05
+						news_event = news.505
+					}
+
+				available = {
+						NOT = {
+								army_manpower_in_state = {
+										state = 357
+										amount < 15000
+									}
+							}
+						NOT = {
+								army_manpower_in_state = {
+										state = 807
+										amount < 15000
+									}
+							}
+							controls_state = 357
+			controls_state = 807
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_ostrov
+		icon = GFX_goal_generic_position_armies
+		cost = 5
+		x = 13
+		y = 4
+				completion_reward = {
+						add_political_power = -50
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_bastion
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 5
+
+		completion_reward = {
+		add_political_power = -75
+		add_war_support = 0.05
+		army_experience = 25
+		custom_effect_tooltip = available_military_high_command
+		show_ideas_tooltip = kenneth_anderson
+		custom_effect_tooltip = available_military_high_command
+		show_ideas_tooltip = john_vereker
+		custom_effect_tooltip = available_military_high_command
+		show_ideas_tooltip = alan_brooke
+		custom_effect_tooltip = available_military_high_command
+		show_ideas_tooltip = archibald_wavell
+		
+		}
+		x = 5
+		y = 8
+
+	}
+	focus = {
+		id = ENG_vnes_europa
+		icon = GFX_focus_usa_focus_on_europe
+		cost = 5
+		x = 12
+		y = 8
+				completion_reward = {
+						add_war_support = 0.05
+						add_political_power = 50
+					}
+
+				available = {
+						has_army_manpower = {
+								size > 450000
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_revolution
+		icon = GFX_goal_demand_sudetenland
+		cost = 5
+		completion_reward = {
+					if = {
+				limit = {
+					NOT = { has_idea = partial_economic_mobilisation }
+					NOT = { has_idea = tot_economic_mobilisation }
+				}
+				add_ideas = partial_economic_mobilisation
+				
+						126 = {
+								add_extra_state_shared_building_slots = 2
+								add_building_construction = {
+										type = arms_factory
+										level = 2
+										instant_build = yes
+									}
+							}
+
+					
+			}
+		}
+		x = 20
+		y = 0
+
+	}
+	focus = {
+		id = ENG_vnes_kair_keyp
+		icon = GFX_focus_generic_africa_infrastructure
+		cost = 10
+		x = 13
+		y = 0
+		ai_will_do = {
+			factor = 10
+		}
+				completion_reward = {
+											
+							hidden_effect = {
+							ENG = {
+							country_event = ENG_britain.64
+							}
+							}
+						446 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 1
+										instant_build = yes
+									}
+							}
+						456 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 1
+										instant_build = yes
+									}
+							}
+						551 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 1
+										instant_build = yes
+									}
+							}
+						549 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 1
+										instant_build = yes
+									}
+							}
+						548 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 1
+										instant_build = yes
+									}
+							}
+						546 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 1
+										instant_build = yes
+									}
+							}
+						545 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 1
+										instant_build = yes
+									}
+							}
+						542 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 2
+										instant_build = yes
+									}
+							}
+						681 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 1
+										instant_build = yes
+									}
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_muzei
+		icon = GFX_goal_generic_CAS
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_march
+		}
+		x = 4
+		y = 1
+				completion_reward = {
+						add_war_support = 0.07
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_history
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_muzei
+		}
+		x = 4
+		y = 2
+				completion_reward = {
+				add_stability = 0.05
+						add_ideas = ENG_history
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_statuia
+		icon = GFX_goal_generic_cavalry
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_march
+		}
+		x = 6
+		y = 1
+				completion_reward = {
+						ENG = {
+								country_event = ENG_britain.57
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_policia
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_statuia
+		}
+		x = 6
+		y = 2
+				completion_reward = {
+						ENG = {
+								country_event = ENG_britain.58
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_priezd_korola
+		icon = GFX_focus_eng_god_save_the_king
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_policia
+		}
+		prerequisite = {
+			focus = ENG_vnes_history
+		}
+		x = 5
+		y = 3
+				completion_reward = {
+				add_named_threat = { threat = 5 name = ENG_korol_threat }
+						add_political_power = 50
+						news_event = news.506
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_parlament
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_priezd_korola
+		}
+		mutually_exclusive = {
+			focus = ENG_vnes_anklav
+		}
+		x = 3
+		y = 4
+				completion_reward = {
+						add_political_power = -100
+						add_stability = -0.05
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_reintegration
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_parlament
+		}
+		x = 2
+		y = 5
+				completion_reward = {
+						swap_ideas = {
+								remove_idea = ENG_occupation
+								add_idea = ENG_occupation2
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_zemchuzina
+		icon = GFX_goal_generic_propaganda
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_parlament
+		}
+		x = 4
+		y = 5
+				completion_reward = {
+						random_owned_controlled_state = {
+								prioritize = {
+
+}
+								add_extra_state_shared_building_slots = 3
+								add_building_construction = {
+										type = industrial_complex
+										level = 3
+										instant_build = yes
+									}
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_anklav
+		icon = GFX_goal_generic_fortify_city
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_priezd_korola
+		}
+		mutually_exclusive = {
+			focus = ENG_vnes_parlament
+		}
+		x = 7
+		y = 4
+				completion_reward = {
+						807 = {
+								add_resistance = -5
+							}
+						357 = {
+								add_resistance = -5
+							}
+						add_stability = 0.05
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_evacuatia
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_anklav
+		}
+		x = 6
+		y = 5
+				completion_reward = {
+						807 = {
+								remove_building = {
+										type = arms_factory
+										level = 1
+									}
+								remove_building = {
+										type = industrial_complex
+										level = 3
+									}
+							}
+						357 = {
+								remove_building = {
+										type = arms_factory
+										level = 1
+									}
+								remove_building = {
+										type = industrial_complex
+										level = 3
+									}
+							}
+						121 = {
+								add_extra_state_shared_building_slots = 4
+								add_building_construction = {
+										type = arms_factory
+										level = 1
+										instant_build = yes
+									}
+								add_building_construction = {
+										type = industrial_complex
+										level = 3
+										instant_build = yes
+									}
+								hidden_effect = {
+										damage_building = {
+												type = arms_factory
+												damage = 0.2
+											}
+										damage_building = {
+												type = industrial_complex
+												damage = 0.1
+											}
+									}
+							}
+						133 = {
+								add_extra_state_shared_building_slots = 4
+								add_building_construction = {
+										type = arms_factory
+										level = 1
+										instant_build = yes
+									}
+								add_building_construction = {
+										type = industrial_complex
+										level = 3
+										instant_build = yes
+									}
+								hidden_effect = {
+										damage_building = {
+												type = arms_factory
+												damage = 0.2
+											}
+										damage_building = {
+												type = industrial_complex
+												damage = 0.1
+											}
+									}
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_snabzenie
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_evacuatia
+		}
+		x = 6
+		y = 6
+				completion_reward = {
+						357 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 2
+										instant_build = yes
+									}
+								add_building_construction = {
+										type = naval_base
+										province = 9832
+										level = 2
+										instant_build = yes
+									}
+								add_building_construction = {
+										type = coastal_bunker
+										province = 9832
+										level = 2
+										instant_build = yes
+									}
+								add_building_construction = {
+										type = naval_base
+										province = 6732
+										level = 2
+										instant_build = yes
+									}
+								add_building_construction = {
+										type = coastal_bunker
+										province = 6732
+										level = 2
+										instant_build = yes
+									}
+							}
+						807 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 2
+										instant_build = yes
+									}
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_dornana
+		icon = GFX_goal_generic_construct_military
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_anklav
+		}
+		x = 8
+		y = 5
+				completion_reward = {
+						807 = {
+								add_building_construction = {
+										type = bunker
+										province = 3878
+										level = 2
+										instant_build = yes
+									}
+								357 = {
+										add_building_construction = {
+												type = bunker
+												province = 9847
+												level = 2
+												instant_build = yes
+											}
+										add_building_construction = {
+												type = bunker
+												province = 9850
+												level = 2
+												instant_build = yes
+											}
+										add_building_construction = {
+												type = bunker
+												province = 908
+												level = 2
+												instant_build = yes
+											}
+										add_building_construction = {
+												type = bunker
+												province = 9675
+												level = 2
+												instant_build = yes
+											}
+										add_building_construction = {
+												type = bunker
+												province = 4445
+												level = 2
+												instant_build = yes
+											}
+										add_building_construction = {
+												type = bunker
+												province = 718
+												level = 2
+												instant_build = yes
+											}
+									}
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_net_predatelam
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_dornana
+		}
+		x = 8
+		y = 6
+				completion_reward = {
+						add_war_support = 0.1
+						army_experience = 10
+						add_tech_bonus = {
+								name = ENG
+								bonus = 1.0
+								uses = 1
+								technology = tech_military_police
+								technology = tech_military_police2
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_navarro
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_snabzenie
+		}
+		prerequisite = {
+			focus = ENG_vnes_net_predatelam
+		}
+		x = 7
+		y = 7
+				completion_reward = {
+						swap_ideas = {
+								remove_idea = ENG_occupation
+								add_idea = ENG_occupation1
+							}
+						add_war_support = 0.05
+						807 = {
+								add_resistance = -15
+								add_compliance = 40
+							}
+						357 = {
+								add_resistance = -15
+								add_compliance = 40
+							}
+						357 = {
+								add_building_construction = {
+										type = radar_station
+										level = 2
+										instant_build = yes
+									}
+								add_building_construction = {
+										type = anti_air_building
+										level = 5
+										instant_build = yes
+									}
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_sdelka_leo
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_kair_keyp
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		mutually_exclusive = {
+			focus = ENG_vnes_serdze
+		}
+		x = 9
+		y = 1
+				completion_reward = {
+						country_event = ENG_britain.59
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_gibraltar
+		icon = GFX_goal_generic_fortify_city
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_bastion
+		}
+		completion_reward = {
+								118 = {
+								add_building_construction = {
+										type = infrastructure
+										level = 2
+										instant_build = yes
+									}
+								add_building_construction = {
+										type = naval_base
+										province = 4135
+										level = 2
+										instant_build = yes
+									}
+								add_building_construction = {
+										type = coastal_bunker
+										province = 4135
+										level = 2
+										instant_build = yes
+									}
+									add_building_construction = {
+										type = bunker
+										province = 4135
+										level = 2
+										instant_build = yes
+									}
+		
+		}
+		}
+		x = 7
+		y = 9
+
+	}
+	focus = {
+		id = ENG_vnes_sredizemie
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_gibraltar
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = ENG_flot
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine	
+			}
+		navy_experience = 20
+		}
+		prerequisite = {
+			focus = ENG_vnes_europa
+		}
+		x = 10
+		y = 10
+
+	}
+	focus = {
+		id = ENG_vnes_bochka
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_sredizemie
+		}
+		available = {
+		GRE = {
+		has_government = neutrality
+		threat > 0.2
+		}
+		}
+		completion_reward = {
+		give_guarantee = GRE
+		}
+		x = 8
+		y = 11
+
+	}
+	
+	focus = {
+		id = ENG_vnes_lissabon
+		icon = GFX_focus_generic_befriend_portugal
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_sredizemie
+		}
+		completion_reward = {
+		POR = { country_event = generic.5 days = 30 }
+		
+		}
+		x = 10
+		y = 11
+
+	}
+	focus = {
+		id = ENG_vnes_serdze
+		icon = GFX_goal_generic_alliance
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_kair_keyp
+		}
+		mutually_exclusive = {
+			focus = ENG_vnes_sdelka_leo
+		}
+		x = 11
+		y = 1
+				completion_reward = {
+						create_wargoal = {
+								type = take_state_focus
+								target = BEL
+								generator = {
+									}
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_masters_afrika
+		icon = GFX_focus_generic_africa_factory
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = ENG_vnes_kair_keyp
+		}
+		x = 13
+		y = 1
+				completion_reward = {
+						547 = {
+								add_extra_state_shared_building_slots = 2
+								add_building_construction = {
+										type = arms_factory
+										level = 2
+										instant_build = yes
+									}
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_coal_company
+		icon = GFX_goal_generic_production2
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_masters_afrika
+		}
+		x = 11
+		y = 2
+				completion_reward = {
+						275 = {
+								add_extra_state_shared_building_slots = 3
+								add_building_construction = {
+										type = industrial_complex
+										level = 3
+										instant_build = yes
+									}
+							}
+						add_ideas = ENG_coal
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_houmrule
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_ostrov
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		mutually_exclusive = {
+			focus = ENG_vnes_reshenie
+		}
+		x = 11
+		y = 5
+				completion_reward = {
+						IRE = {
+								transfer_state = 134
+							}
+						IRE = {
+								transfer_state = 113
+							}
+						IRE = {
+								transfer_state = 135
+							}
+						ENG = {
+								puppet = IRE
+								news_event = news.508
+							}
+						add_political_power = 100
+						add_manpower = 60000
+						add_stability = 0.05
+					}
+
+				available = {
+						NOT = {
+								country_exists = IRE
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_baleari
+		icon = GFX_goal_unknown
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_sredizemie
+		}
+		available = {
+		SPR = {
+		has_full_control_of_state = 177
+		}
+		}
+		completion_reward = {
+		SPR = {
+		country_event = SPA_spain.1
+		}
+		}
+		x = 12
+		y = 11
+
+	}
+	focus = {
+		id = ENG_vnes_zitnica
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {
+			focus = ENG_vnes_masters_afrika
+		}
+		x = 13
+		y = 2
+				completion_reward = {
+						remove_ideas = ENG_golod
+						add_stability = 0.05
+						add_war_support = 0.05
+					}
+
+				available = {
+						549 = {
+								infrastructure > 4
+							}
+						558 = {
+								infrastructure > 4
+							}
+						547 = {
+								infrastructure > 4
+							}
+						548 = {
+								infrastructure > 4
+							}
+						has_full_control_of_state = 549
+						has_full_control_of_state = 558
+						has_full_control_of_state = 547
+						has_full_control_of_state = 548
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_steal
+		icon = GFX_focus_generic_africa_production
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_masters_afrika
+		}
+		x = 15
+		y = 2
+				completion_reward = {
+						add_political_power = -30
+						453 = {
+								add_resource = {
+										type = steel
+										amount = 16
+									}
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_solnce
+		icon = GFX_goal_anschluss
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_coal_company
+		}
+		prerequisite = {
+			focus = ENG_vnes_zitnica
+		}
+		prerequisite = {
+			focus = ENG_vnes_steal
+		}
+		x = 13
+		y = 3
+				completion_reward = {
+						547 = {
+								add_extra_state_shared_building_slots = 2
+								add_building_construction = {
+										type = industrial_complex
+										level = 2
+										instant_build = yes
+									}
+								add_building_construction = {
+										type = infrastructure
+										level = 2
+										instant_build = yes
+									}
+							}
+						546 = {
+								add_extra_state_shared_building_slots = 2
+								add_building_construction = {
+										type = industrial_complex
+										level = 2
+										instant_build = yes
+									}
+								add_building_construction = {
+										type = infrastructure
+										level = 2
+										instant_build = yes
+									}
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_ivory
+		icon = GFX_goal_generic_military_sphere
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_kair_keyp
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+		
+		has_army_manpower = { size > 2500000 }
+		
+		
+		}
+		}
+		x = 15
+		y = 1
+				completion_reward = {
+						create_wargoal = {
+								type = take_state_focus
+								target = IVO
+								generator = {
+									}
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_reshenie
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_ostrov
+		}
+		mutually_exclusive = {
+			focus = ENG_vnes_houmrule
+		}
+		x = 15
+		y = 5
+				completion_reward = {
+						add_state_core = 113
+						add_state_core = 135
+						add_state_core = 134
+						add_political_power = -125
+						add_stability = -0.15
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_proliv
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_europa
+		}
+		x = 15
+		y = 9
+				completion_reward = {
+						FRA = {
+								country_event = france.5
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_amsterdam
+		icon = GFX_focus_hol_oranje_boven
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_proliv
+		}
+		completion_reward = {
+		create_wargoal = {
+								type = take_state_focus
+								target = HOL
+								generator = {
+									}
+							}
+		}
+		x = 15
+		y = 10
+
+	}
+
+
+	focus = {
+		id = ENG_vnes_belgia
+		icon = GFX_focus_fra_le_deluge
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_proliv
+		}
+		completion_reward = {
+		add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -7500
+			    producer = ENG
+			}
+			add_political_power = -100
+			custom_effect_tooltip = ENG_vosstanie_belgii
+			FRA = {
+set_country_flag = Belgium_vosstanie
+}
+		}
+		x = 17
+		y = 10
+
+	}
+	focus = {
+		id = ENG_vnes_blockada_fra
+		icon = GFX_focus_focus_fra_down_marianne
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_revolution
+		}
+		completion_reward = {
+		FRA = {
+		country_event = france_event.1
+		}
+		
+		}
+		ai_will_do = {
+		modifier = {
+		
+		has_army_manpower = { size > 400000 }
+		
+		
+		}
+		}
+		x = 20
+		y = 1
+
+	}
+	focus = {
+		id = ENG_vnes_torgovla
+		icon = GFX_goal_generic_trade
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_blockada_fra
+		}
+		completion_reward = {
+		add_timed_idea = { idea = ENG_torgovla_vnes days = 365 }
+		
+		}
+		x = 19
+		y = 2
+
+	}
+	focus = {
+		id = ENG_vnes_b_day
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_torgovla
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = ENG_marines_and_landing_craft
+				bonus = 1.0
+				uses = 1
+				category = marine_tech
+
+			}
+			add_tech_bonus = {
+				name = ENG_marines_and_landing_craft
+				bonus = 1.0
+				uses = 1
+				category = tp_tech
+			}
+			add_ideas = ENG_plan_B
+		}
+		
+		x = 19
+		y = 3
+
+	}
+	focus = {
+		id = ENG_vnes_ultimatum
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_b_day
+		}
+		completion_reward = {
+		FRA = { country_event = france_event.3
+		}
+		}
+		x = 19
+		y = 4
+
+	}
+	focus = {
+		id = ENG_vnes_puatie
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_ultimatum
+		}
+		available = {
+		OR = {
+		FRA = { has_capitulated = yes }
+		}
+		
+		
+		}
+		
+		completion_reward = {
+		add_political_power = 150
+		}
+		x = 19
+		y = 5
+
+	}
+	focus = {
+		id = ENG_vnes_poradok
+		icon = GFX_goal_generic_propaganda
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_puatie
+		}
+		completion_reward = {
+		add_stability = 0.1
+		}
+		x = 19
+		y = 6
+
+	}
+#	focus = {
+#		id = ENG_vnes_viking
+#		icon = GFX_goal_generic_attack_allies
+#		cost = 5
+#		prerequisite = {
+#			focus = ENG_vnes_europa
+#		}
+#		x = 21
+#		y = 9
+#
+#	}
+#	focus = {
+#		id = ENG_vnes_treska
+#		icon = GFX_goal_generic_navy_submarine
+#		cost = 5
+#		prerequisite = {
+#			focus = ENG_vnes_viking
+#		}
+#	x = 20
+#	y = 10
+#
+# }
+
+	focus = {
+		id = ENG_vnes_friend
+		icon = GFX_goal_generic_alliance
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_blockada_fra
+		}
+		available = {
+		NOT = {
+		GER =		{
+						has_government = neutrality
+						has_government = communism
+						}
+		}
+		}
+		completion_reward = {
+		add_political_power = -50
+		add_timed_idea = { idea = ENG_pomosh_GER days = 365  }
+		GER = {
+		add_timed_idea = { idea = GER_ENG_pomosh_GER days = 365  }
+		}
+		}
+		x = 21
+		y = 2
+
+	}
+	focus = {
+		id = ENG_vnes_ugl_i_stal
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5
+		available = {
+		NOT = {
+		GER =		{
+						has_government = neutrality
+						has_government = communism
+						}
+		}
+		}
+		prerequisite = {
+			focus = ENG_vnes_friend
+		}
+		completion_reward = {
+		GER = { country_event = generic.5 days = 30 }
+		
+		}
+		x = 21
+		y = 3
+
+	}
+	focus = {
+		id = ENG_vnes_hearts_iron
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 5
+		available = {
+		NOT = {
+		GER =		{
+						has_government = neutrality
+						has_government = communism
+						}
+		}
+		}
+		prerequisite = {
+			focus = ENG_vnes_ugl_i_stal
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+			GER = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1.5
+				category = armor
+			}
+			
+			}
+		126 = {
+								add_extra_state_shared_building_slots = 3
+								add_building_construction = {
+										type = arms_factory
+										level = 3
+										instant_build = yes
+									}
+							}
+							64 = {
+								add_extra_state_shared_building_slots = 3
+								add_building_construction = {
+										type = arms_factory
+										level = 3
+										instant_build = yes
+									}
+							}
+		
+		}
+		x = 21
+		y = 4
+
+	}
+#	focus = {
+#		id = ENG_vnes_sever
+#		icon = GFX_goal_generic_occupy_start_war
+#		cost = 5
+#		prerequisite = {
+#			focus = ENG_vnes_viking
+#		}
+#		x = 22
+#		y = 10
+#
+#	}
+#	focus = {
+#		id = ENG_vnes_scandinavia
+#		icon = GFX_goal_generic_demand_territory
+#		cost = 5
+#		prerequisite = {
+#			focus = ENG_vnes_sever
+#		}
+#		prerequisite = {
+#			focus = ENG_vnes_treska
+#		}
+#		x = 21
+#		y = 11
+#
+#	}
+	focus = {
+		id = ENG_vnes_state
+		icon = GFX_goal_generic_position_armies
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_zemchuzina
+		}
+		x = 4
+		y = 6
+				completion_reward = {
+						add_stability = 0.1
+						custom_effect_tooltip = available_political_advisor
+						show_ideas_tooltip = ENG_lavkraft
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_pasporta
+		icon = GFX_goal_generic_improve_relations
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_reintegration
+		}
+		x = 2
+		y = 6
+				completion_reward = {
+						807 = {
+								add_resistance = -10
+							}
+						357 = {
+								add_resistance = -10
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_chaepitie
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = ENG_vnes_state
+		}
+		prerequisite = {
+			focus = ENG_vnes_pasporta
+		}
+		x = 3
+		y = 7
+				completion_reward = {
+						add_state_core = 807
+						add_state_core = 357
+						swap_ideas = {
+								remove_idea = ENG_occupation2
+								add_idea = ENG_occupation3
+							}
+					}
+
+
+	}
+	focus = {
+		id = ENG_vnes_suez
+		icon = GFX_focus_generic_coastal_fort
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_gibraltar
+		}
+		completion_reward = {
+		add_political_power = -30
+			446 = {
+								add_building_construction = {
+										type = bunker
+										province = 4073
+										level = 2
+										instant_build = yes
+									}
+									add_building_construction = {
+										type = bunker
+										province = 12049
+										level = 2
+										instant_build = yes
+									}
+									}
+									453 = {
+								add_building_construction = {
+										type = bunker
+										province = 1155
+										level = 2
+										instant_build = yes
+									}
+									add_building_construction = {
+										type = bunker
+										province = 9974
+										level = 2
+										instant_build = yes
+									}
+									}
+
+			custom_effect_tooltip = ENG_voiska
+			hidden_effect = {
+
+				division_template = {
+				name = "Suez Division"
+				division_names_group = ENG_INF_01
+				regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+		        		infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+
+
+							}
+
+						}
+		
+					random_owned_controlled_state = {
+							prioritize = { 446 }
+							create_unit = { 
+								division = "name = \"1. Suez Division\" division_template = \"Suez Division\" start_experience_factor = 0.2" 
+								owner = ENG
+								}
+		
+					}
+										random_owned_controlled_state = {
+							prioritize = { 446 }
+							create_unit = { 
+								division = "name = \"2. Suez Division\" division_template = \"Suez Division\" start_experience_factor = 0.2" 
+								owner = ENG
+								}
+		
+					}
+
+				}
+
+		
+		}
+		x = 7
+		y = 10
+
+	}
+	focus = {
+		id = ENG_vnes_air
+		icon = GFX_goal_generic_air_fighter
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_bastion
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}
+			air_experience = 50
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+		}
+		x = 5
+		y = 9
+
+	}
+	focus = {
+		id = ENG_vnes_echo
+		icon = GFX_goal_generic_radar
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_air
+		}
+		completion_reward = {
+		add_war_support = 0.07
+					if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				add_tech_bonus = {
+					bonus = 1.0
+					uses = 1
+					category = encryption_tech
+					category = decryption_tech
+				}
+							else = {
+				hidden_effect = {
+					set_technology = { lar_decryption_bonus_tech = 1 }
+				}
+				custom_effect_tooltip = lar_decryption_bonus_tt
+			}
+			}
+			}
+		
+		
+		x = 5
+		y = 10
+
+	}
+	focus = {
+		id = ENG_vnes_naberegu
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_echo
+		}
+		completion_reward = {
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = louis_mountbatten
+		army_experience = 15
+		
+		}
+		x = 5
+		y = 11
+
+	}
+	focus = {
+		id = ENG_vnes_calm
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_bastion
+		}
+		available = {
+		has_war_support > 0.2 
+		}
+		completion_reward = {
+		338 = {
+		add_building_construction = {
+						type = anti_air_building
+						level = 1
+						instant_build = yes
+					}
+					}
+					127 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 1
+						instant_build = yes
+					}
+					}
+					123 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 1
+						instant_build = yes
+					}
+					}
+					add_tech_bonus = {
+				name = ARTA
+				bonus = 1.00
+				uses = 1
+				category = artillery
+			}
+		}
+		x = 3
+		y = 9
+
+	}
+	focus = {
+		id = ENG_vnes_takes
+		icon = GFX_focus_generic_manpower
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_calm
+		}
+		completion_reward = {
+		add_war_support = 0.1
+		army_experience = 15
+			add_tech_bonus = {
+				name = Army
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		x = 3
+		y = 10
+
+	}
+	focus = {
+		id = ENG_vnes_bullet
+		icon = GFX_goal_generic_defence
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_takes
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = Rifle
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		
+		}
+		x = 3
+		y = 11
+
+	}
+
+	focus = {
+		id = ENG_vnes_lion_heart
+		icon = GFX_goal_generic_secret_weapon
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnes_revolution
+		}
+		available = {
+		GER = {
+						has_government = neutrality
+						has_government = communism
+						}
+					}
+					completion_reward = {
+					create_wargoal = {
+				target = GER
+				type = puppet_wargoal_focus
+				expire = 0
+			}
+					
+					}
+		x = 23
+		y = 1
+
+	}
+	
+	
+	focus = {
+		id = ENG_vnutr_discord
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5
+		mutually_exclusive = {
+			focus = ENG_vnutr_akkord
+		}
+		available = {
+		has_country_flag = ENG_flag_discord
+		}
+		completion_reward = {
+		add_political_power = 75
+		}
+		x = 27
+		y = 0
+
+	}
+	focus = {
+		id = ENG_vnutr_akkord
+		icon = GFX_goal_support_fascism
+		cost = 5
+		available = {
+		has_country_flag = ENG_flag_accord
+		}
+		mutually_exclusive = {
+			focus = ENG_vnutr_discord
+		}
+		completion_reward = {
+		add_timed_idea = {
+				idea = ENG_akkord
+				days = 365
+			}
+		}
+		x = 34
+		y = 0
+
+	}
+	focus = {
+		id = ENG_vnutr_commi
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_discord
+		}
+		completion_reward = {
+		add_popularity = { ideology = communism popularity = -0.05 }
+		add_popularity = { ideology = neutrality popularity = 0.1 }
+		}
+		x = 26
+		y = 1
+
+	}
+	focus = {
+		id = ENG_vnutr_kostri
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_commi
+		}
+		completion_reward = {
+		add_timed_idea = {
+				idea = ENG_kostri
+				days = 365
+			}
+		}
+		x = 26
+		y = 2
+
+	}
+	focus = {
+		id = ENG_vnutr_cabinet
+		icon = GFX_goal_tripartite_pact
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_discord
+		}
+		completion_reward = {
+		add_ideas = ENG_cabinet
+		}
+		x = 28
+		y = 1
+
+	}
+	focus = {
+		id = ENG_vnutr_sanacia
+		icon = GFX_focus_generic_military_academy
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_cabinet
+		}
+		completion_reward = {
+		add_political_power = 150
+		add_stability = -0.05
+		add_war_support = 0.05
+		
+		}
+		x = 28
+		y = 2
+
+	}
+	focus = {
+		id = ENG_vnutr_popravki
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		prerequisite = {
+			focus = ENG_vnutr_kostri
+		}
+		prerequisite = {
+			focus = ENG_vnutr_sanacia
+		}
+		completion_reward = {
+		add_research_slot = 1
+		add_ideas = ENG_popravki
+		}
+		x = 27
+		y = 3
+
+	}
+	focus = {
+		id = ENG_vnutr_gayki
+		icon = GFX_goal_continuous_restrict_freedom
+		cost = 5
+		available = {
+		neutrality > 0.35
+		}
+		prerequisite = {
+			focus = ENG_vnutr_popravki
+		}
+		completion_reward = {
+		set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+		add_ideas = ENG_svoboda
+		}
+		x = 25
+		y = 4
+
+	}
+	focus = {
+		id = ENG_vnutr_sudi
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_popravki
+		}
+		completion_reward = {
+		add_stability = 0.1
+		}
+		x = 29
+		y = 4
+
+	}
+	focus = {
+		id = ENG_vnutr_cerkov
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_sanacia
+		}
+		completion_reward = {
+		add_ideas = ENG_cerkov1
+		}
+		x = 30
+		y = 3
+
+	}
+	focus = {
+		id = ENG_vnutr_molodez
+		icon = GFX_goal_generic_national_unity
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_akkord
+		}
+		completion_reward = {
+		add_political_power = 50
+		add_stability = 0.05
+		custom_effect_tooltip = ENG_molodez
+		}
+		x = 34
+		y = 1
+
+	}
+	focus = {
+		id = ENG_vnutr_otryadi
+		icon = GFX_goal_generic_small_arms
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_molodez
+		}
+		completion_reward = {
+		add_political_power = -75
+		add_popularity = { ideology = fascism popularity = 0.1 }
+		add_ideas = ENG_otryadi
+		add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -3000
+			    producer = ENG
+			}
+		}
+		x = 32
+		y = 2
+
+	}
+	focus = {
+		id = ENG_vnutr_nazia
+		icon = GFX_goal_generic_propaganda
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_molodez
+		}
+		completion_reward = {
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		add_political_power = 100
+		add_stability = -0.05
+		}
+		x = 34
+		y = 2
+
+	}
+	focus = {
+		id = ENG_vnutr_chelovek
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_molodez
+		}
+		completion_reward = {
+		add_political_power = 50
+		add_ideas = ENG_chelovek
+		}
+		x = 36
+		y = 2
+
+	}
+	focus = {
+		id = ENG_vnutr_sila_ravnopravie
+		icon = GFX_focus_eng_the_sun_never_sets
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_nazia
+		}
+		prerequisite = {
+			focus = ENG_vnutr_chelovek
+		}
+		completion_reward = {
+		add_stability = 0.1
+		add_ideas = ENG_sila
+		}
+		x = 34
+		y = 3
+
+	}
+	focus = {
+		id = ENG_vnutr_krasnoe_chernoe
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_chelovek
+		}
+		prerequisite = {
+			focus = ENG_vnutr_nazia
+		}
+		completion_reward = {
+		add_stability = 0.05
+		add_war_support = 0.07
+	
+		}
+		x = 36
+		y = 3
+
+	}
+	focus = {
+		id = ENG_vnutr_democracy
+		icon = GFX_goal_generic_major_alliance
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_krasnoe_chernoe
+		}
+		prerequisite = {
+			focus = ENG_vnutr_sila_ravnopravie
+		}
+		completion_reward = {
+		set_politics = {
+					ruling_party = fascism
+					elections_allowed = no
+				}
+				add_research_slot = 1
+				add_popularity = { ideology = fascism popularity = 0.1 }
+				add_stability = 0.05
+		}
+		x = 35
+		y = 4
+
+	}
+	focus = {
+		id = ENG_vnutr_peshki
+		icon = GFX_goal_generic_national_unity
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_popravki
+		}
+		completion_reward = {
+		add_political_power = 50
+		custom_effect_tooltip = available_political_advisor
+						show_ideas_tooltip = ENG_frederik
+		}
+		x = 27
+		y = 4
+
+	}
+	focus = {
+		id = ENG_vnutr_frontir
+		icon = GFX_goal_tfv_saf_secure_interests_in_africa_shine
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_chelovek
+		}
+		available = {
+		has_completed_focus = ENG_vnes_kair_keyp
+		}
+		completion_reward = {
+		558 = {
+								add_extra_state_shared_building_slots = 2
+								add_compliance = 10
+							}
+							547 = {
+								add_extra_state_shared_building_slots = 2
+								add_compliance = 10
+							}
+							546 = {
+								add_extra_state_shared_building_slots = 2
+								add_compliance = 10
+							}
+							549 = {
+								add_extra_state_shared_building_slots = 2
+								add_compliance = 10
+							}
+							275 = {
+								add_extra_state_shared_building_slots = 2
+							}
+		}
+		x = 38
+		y = 3
+
+	}
+	focus = {
+		id = ENG_vnutr_grazdanstvo
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 5
+		prerequisite = {
+			focus = ENG_vnutr_democracy
+		}
+		completion_reward = {
+		add_political_power = 150
+		add_war_support = 0.07
+		add_ideas = ENG_grazdanstvo
+		custom_effect_tooltip = available_political_advisor
+						show_ideas_tooltip = ENG_mary_sophia_allen
+		}
+		x = 35
+		y = 5
+
+	}
+	
+}

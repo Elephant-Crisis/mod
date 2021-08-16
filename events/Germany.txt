@@ -1,0 +1,26 @@
+﻿###########################
+# Australia Events
+###########################
+
+	add_namespace = GER
+	country_event = {
+	id = GER.1
+	title = GER.1.t
+	desc = GER.1.d
+	picture = GFX_report_event_german_troops
+fire_only_once = yes
+trigger = {
+FRA = { has_war = yes }
+}
+	option = { # Accept demands
+		name = GER.1.a
+		GER = {
+		declare_war_on = {
+					target = BAY
+					type = take_state_focus
+					generator = { 60 }
+				}
+		}
+		news_event = news.514
+	}
+}

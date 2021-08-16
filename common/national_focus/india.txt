@@ -1,0 +1,998 @@
+focus_tree = {        
+      id = indian_focus ##Пример germen_focus
+      
+		country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = RAJ
+			has_dlc = "Together for Victory"
+		}
+
+		#modifier = {
+		#	add = 10
+		#	original_tag = RAJ
+		#	has_dlc = "Together for Victory"
+		#}
+	}
+	
+	default = no
+	focus = {
+		id = IND_economic_korona
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		completion_reward = {
+		add_political_power = 50
+		add_research_slot = 1
+		}
+		
+		x = 6
+		y = 0
+
+	}
+	focus = {
+		id = IND_vnutr_problemi
+		icon = GFX_goal_generic_position_armies
+		cost = 5
+		completion_reward = {
+		add_political_power = 100
+		add_stability = 0.05
+		}
+		x = 14
+		y = 0
+
+	}
+	focus = {
+		id = IND_vnes_vopros
+		icon = GFX_goal_unknown
+		cost = 5
+		x = 24
+		y = 0
+		available = {
+		has_completed_focus = IND_vnutr_reformi
+		}
+		completion_reward = {
+		
+		add_political_power = 100
+		add_stability = -0.05
+		
+		}
+
+	}
+	focus = {
+		id = IND_economic_voiska
+		icon = GFX_goal_generic_small_arms
+		cost = 5
+		prerequisite = {
+			focus = IND_economic_korona
+		}
+		completion_reward = {
+		army_experience = 15
+		}
+		x = 4
+		y = 1
+
+	}
+	focus = {
+		id = IND_economic_armia
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 5
+		prerequisite = {
+			focus = IND_economic_voiska
+		}
+	
+		completion_reward = {
+		add_tech_bonus = {
+				name = RAJ_army_doctrina
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+		
+		}
+		
+		x = 3
+		y = 2
+
+	}
+	focus = {
+		id = IND_economic_grom_palka
+		icon = GFX_goal_generic_military_sphere
+		cost = 10
+		prerequisite = {
+			focus = IND_economic_armia
+		}
+		completion_reward = {
+		add_ideas = IND_palka
+		add_war_support = 0.05
+		}
+		x = 1
+		y = 3
+
+	}
+	focus = {
+		id = IND_economic_strelalo
+		icon = GFX_goal_generic_army_artillery2
+		cost = 5
+		prerequisite = {
+			focus = IND_economic_armia
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = BUH_artillery_focus
+				bonus = 1.00
+				uses = 2
+				category = artillery
+			}
+		
+		}
+		x = 3
+		y = 3
+
+	}
+	focus = {
+		id = IND_economic_flot
+		icon = GFX_goal_generic_navy_battleship
+		cost = 5
+		prerequisite = {
+			focus = IND_economic_voiska
+		}
+		
+		completion_reward = {
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+					
+				}
+			}
+			navy_experience = 20
+			}
+		
+		x = 5
+		y = 2
+
+	}
+	focus = {
+		id = IND_economic_conoe
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 5
+		prerequisite = {
+			focus = IND_economic_flot
+		}
+		
+	completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				uses = 1
+				category = ss_tech
+			}
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				category = submarine_doctrine
+				#technology = submarine_operations
+				#technology = undersea_blockade
+				#technology = convoy_interdiction
+				#technology = submarine_offensive
+			}
+			
+			
+		}
+		x = 5
+		y = 3
+
+	}
+	focus = {
+		id = IND_economic_ptici
+		icon = GFX_goal_generic_air_fighter
+		cost = 5
+		prerequisite = {
+			focus = IND_economic_conoe
+		}
+		prerequisite = {
+			focus = IND_economic_strelalo
+		}
+		prerequisite = {
+			focus = IND_economic_grom_palka
+		}
+	
+		completion_reward = {
+					add_tech_bonus = {
+				name = fighter_command
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+			air_experience = 15
+		}
+		x = 4
+		y = 4
+
+	}
+	focus = {
+		id = IND_economic_zavodi
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 5
+		prerequisite = {
+			focus = IND_economic_korona
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+				prioritize = { 423 }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		x = 8
+		y = 1
+
+	}
+	focus = {
+		id = IND_economic_med
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5
+		prerequisite = {
+			focus = IND_economic_zavodi
+		}
+		completion_reward = {
+		swap_ideas = {
+     remove_idea = med_3
+     add_idea = med_2
+}
+}
+		x = 7
+		y = 2
+
+	}
+	focus = {
+		id = IND_economic_bog_meda
+		icon = GFX_goal_generic_political_pressure
+		cost = 5
+		prerequisite = {
+			focus = IND_economic_med
+		}
+		completion_reward = {
+		swap_ideas = {
+     remove_idea = med_2
+     add_idea = med_1
+}
+		}
+		x = 7
+		y = 3
+
+	}
+	focus = {
+		id = IND_economic_palki_vsem
+		icon = GFX_goal_generic_army_artillery
+		cost = 5
+		prerequisite = {
+			focus = IND_economic_zavodi
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		x = 9
+		y = 2
+
+	}
+	focus = {
+		id = IND_economic_nosorogi
+		icon = GFX_goal_generic_army_tanks
+		cost = 5
+		prerequisite = {
+			focus = IND_economic_palki_vsem
+		}
+		
+		completion_reward = {
+add_tech_bonus = {
+				name = IND_tanki
+				bonus = 1.5
+				uses = 1
+				category = armor
+			}			
+		}
+		
+		x = 9
+		y = 3
+
+	}
+	focus = {
+		id = IND_economic_resurses
+		icon = GFX_goal_generic_construction2
+		cost = 5
+		prerequisite = {
+			focus = IND_economic_bog_meda
+		}
+		prerequisite = {
+			focus = IND_economic_nosorogi
+		}
+		completion_reward = {
+							425 = {
+				add_resource = {
+					type = rubber
+					amount = 18
+				}
+			} 
+			425 = {
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+			} 
+		
+		}
+		x = 8
+		y = 4
+
+	}
+	focus = {
+		id = IND_vnutr_bidlo
+		icon = GFX_goal_anti_comintern_pact
+		cost = 5
+		prerequisite = {
+			focus = IND_vnutr_problemi
+		}
+		completion_reward = {
+		country_event = IND_bidlo.1
+		}
+		x = 12
+		y = 1
+
+	}
+	focus = {
+		id = IND_vnutr_obrazovanie
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5
+		prerequisite = {
+			focus = IND_vnutr_bidlo
+		}
+		completion_reward = {
+		add_research_slot = 1
+		}
+		x = 12
+		y = 2
+
+	}
+	focus = {
+		id = IND_vnutr_psiholog
+		icon = GFX_goal_generic_national_unity
+		cost = 5
+		prerequisite = {
+			focus = IND_vnutr_obrazovanie
+		}
+		mutually_exclusive = {
+			focus = IND_vnutr_bez_psihologa
+		}
+		completion_reward = {
+		country_event = IND_psihologg.1
+		}
+		x = 11
+		y = 3
+
+	}
+	focus = {
+		id = IND_vnutr_bez_psihologa
+		icon = GFX_goal_generic_secret_weapon
+		cost = 5
+		prerequisite = {
+			focus = IND_vnutr_obrazovanie
+		}
+		mutually_exclusive = {
+			focus = IND_vnutr_psiholog
+		}
+		completion_reward = {
+		country_event = IND_psiholog.2
+		}
+		x = 13
+		y = 3
+
+	}
+	focus = {
+		id = IND_vnutr_corruption
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5
+		prerequisite = {
+			focus = IND_vnutr_problemi
+		}
+		mutually_exclusive = {
+			focus = IND_vnutr_corruption_da
+		}
+		completion_reward = {
+		add_ideas = IND_no_corruption
+		}
+		
+		x = 14
+		y = 1
+
+	}
+	focus = {
+		id = IND_vnutr_corruption_da
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 5
+		prerequisite = {
+			focus = IND_vnutr_problemi
+		}
+		mutually_exclusive = {
+			focus = IND_vnutr_corruption
+		}
+		completion_reward = {
+		add_ideas = IND_corruption
+		add_offsite_building = { type = industrial_complex level = 2 }
+		}
+		x = 16
+		y = 1
+
+	}
+	focus = {
+		id = IND_vnutr_apparat
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5
+		prerequisite = {
+			focus = IND_vnutr_corruption
+			focus = IND_vnutr_corruption_da
+		}
+		completion_reward = {
+		custom_effect_tooltip = available_theorist
+	    show_ideas_tooltip = RAJ_rajendra_prasad
+		custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = RAJ_john_edward_golightly
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = RAJ_john_mathai
+		}
+		x = 15
+		y = 2
+
+	}
+	focus = {
+		id = IND_vnutr_doma
+		icon = GFX_goal_generic_construct_civilian
+		cost = 5
+		prerequisite = {
+			focus = IND_vnutr_apparat
+		}
+		completion_reward = {
+		add_ideas = IND_doma
+		completion_reward = {
+		random_owned_controlled_state = {
+				prioritize = { 423 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		}
+		x = 15
+		y = 3
+
+	}
+	focus = {
+		id = IND_vnutr_reformi
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		prerequisite = {
+			focus = IND_vnutr_psiholog
+			focus = IND_vnutr_bez_psihologa
+		}
+		prerequisite = {
+			focus = IND_vnutr_doma
+		}
+		completion_reward = {
+		add_research_slot = 1
+		add_political_power = 150
+		}
+		x = 13
+		y = 4
+
+	}
+	focus = {
+		id = IND_vnes_otkaz_ot_britain
+		icon = GFX_goal_generic_alliance
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_vopros
+		}
+		mutually_exclusive = {
+			focus = IND_vnes_soyuz_brit
+		}
+		completion_reward = {
+		ENG = {
+				add_opinion_modifier = { target = RAJ modifier = RAJ_vrag_brit }
+			}
+	
+		}
+		x = 21
+		y = 1
+
+	}
+	focus = {
+		id = IND_vnes_communist
+		icon = GFX_goal_support_communism
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_otkaz_ot_britain
+		}
+		mutually_exclusive = {
+			focus = IND_vnes_necommunism
+		}
+		completion_reward = {
+		add_popularity = { ideology = communism popularity = 0.1 }
+		}
+		x = 20
+		y = 2
+
+	}
+	focus = {
+		id = IND_vnes_vliyanie_com
+		icon = GFX_goal_support_fourth_int
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_communist
+		}
+		completion_reward = {
+		add_ideas = IND_communism
+		add_popularity = { ideology = communism popularity = 0.1 }
+		}
+		x = 18
+		y = 3
+
+	}
+	focus = {
+		id = IND_vnes_ind_edina
+		icon = GFX_goal_generic_position_armies
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_communist
+		}
+		completion_reward = {
+		create_wargoal = {
+ 				type = take_state_focus
+ 				target = IND
+ 				expire = 0
+ 				generator = { 429 }
+ 			}
+		}
+		x = 20
+		y = 3
+
+	}
+	focus = {
+		id = IND_vnes_birma
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_ind_edina
+		}
+		completion_reward = {
+		create_wargoal = {
+ 				type = take_state_focus
+ 				target = BRM
+ 				expire = 0
+ 				generator = { 432 }
+ 			}
+			create_wargoal = {
+ 				type = take_state_focus
+ 				target = BAN
+ 				expire = 0
+ 				generator = { 431 }
+ 			}
+			
+		}
+		x = 20
+		y = 4
+
+	}
+	focus = {
+		id = IND_vnes_voyna
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_birma
+		}
+		mutually_exclusive = {
+			focus = IND_vnes_obyedinenie
+		}
+		completion_reward = {
+		create_wargoal = {
+ 				type = take_state_focus
+ 				target = MAR
+ 				expire = 0
+ 				generator = { 427 }
+ 			}
+			
+		}
+		x = 20
+		y = 5
+
+	}
+	focus = {
+		id = IND_vnes_necommunism
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_otkaz_ot_britain
+		}
+		mutually_exclusive = {
+			focus = IND_vnes_communist
+		}
+		completion_reward = {
+		add_stability = 0.05
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		}
+		x = 22
+		y = 2
+
+	}
+	focus = {
+		id = IND_vnes_indusi
+		icon = GFX_goal_tripartite_pact
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_necommunism
+		}
+		mutually_exclusive = {
+			focus = IND_vnes_USA_pomosh
+		}
+		completion_reward = {
+		
+		set_rule = { can_create_factions = yes }
+		create_faction = IND_soyuz
+		IND = { country_event = generic.5 days = 30 }
+		}
+		
+		x = 22
+		y = 3
+
+	}
+	focus = {
+		id = IND_vnes_induisti2
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 10
+		prerequisite = {
+			focus = IND_vnes_indusi
+		}
+		completion_reward = {
+		IND = { country_event = { id = IND_india.1 } }
+		}
+		x = 22
+		y = 4
+
+	}
+	focus = {
+		id = IND_vnes_USA_pomosh
+		icon = GFX_focus_usa_recruit_the_free_corps
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_necommunism
+		}
+		mutually_exclusive = {
+			focus = IND_vnes_indusi
+		}
+		available = {
+		USA = {
+		has_completed_focus = USA_vnesneya_alliance
+		}
+		}
+		completion_reward = {
+		USA = { country_event = { id = USA_india.1 } }
+		
+		}
+		x = 24
+		y = 3
+
+	}
+	focus = {
+		id = IND_vnes_USAalliance
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_USA_pomosh
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		x = 24
+		y = 4
+
+	}
+	focus = {
+		id = IND_vnes_communist2
+		icon = GFX_goal_demand_sudetenland
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_USAalliance
+			focus = IND_vnes_induisti2
+		}
+		completion_reward = {
+		create_wargoal = {
+ 				type = take_state_focus
+ 				target = MAR
+ 				expire = 0
+ 				generator = { 427 }
+ 			}
+			create_wargoal = {
+ 				type = take_state_focus
+ 				target = IND
+ 				expire = 0
+ 				generator = { 429 }
+ 			}
+		}
+		x = 23
+		y = 5
+
+	}
+	focus = {
+		id = IND_vnes_soyuz_brit
+		icon = GFX_focus_chi_british_cooperation
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_vopros
+		}
+		mutually_exclusive = {
+			focus = IND_vnes_otkaz_ot_britain
+		}
+		completion_reward = {
+				ENG = {
+				add_opinion_modifier = { target = RAJ modifier = RAJ_drug_brit }
+				ENG = { country_event = { id = ENG_britain.55 } }
+			}
+		}
+		x = 27
+		y = 1
+
+	}
+	focus = {
+		id = IND_vnes_voyna_comm
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_soyuz_brit
+		}
+		completion_reward = {
+		create_wargoal = {
+ 				type = take_state_focus
+ 				target = MAR
+ 				expire = 0
+ 				generator = { 427 }
+ 			}
+		}
+		x = 27
+		y = 2
+
+	}
+	focus = {
+		id = IND_vnes_zakreplenie_birma
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_voyna_comm
+		}
+		completion_reward = {
+		create_wargoal = {
+ 				type = take_state_focus
+ 				target = BRM
+ 				expire = 0
+ 				generator = { 432 }
+ 			}
+			create_wargoal = {
+ 				type = take_state_focus
+ 				target = BAN
+ 				expire = 0
+ 				generator = { 431 }
+ 			}
+			
+		}
+		x = 27
+		y = 3
+
+	}
+	focus = {
+		id = IND_vnes_voyna_induizm
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_zakreplenie_birma
+		}
+		completion_reward = {
+		create_wargoal = {
+ 				type = take_state_focus
+ 				target = IND
+ 				expire = 0
+ 				generator = { 429 }
+ 			}
+		}
+		x = 27
+		y = 4
+
+	}
+	focus = {
+		id = IND_vnes_irkutsk
+		icon = GFX_goal_generic_territory_or_war
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_voyna_induizm
+		}
+		completion_reward = {
+		add_state_core = 566
+		}
+		x = 27
+		y = 5
+
+	}
+	focus = {
+		id = IND_vnes_podderzka_Dementiya
+		icon = GFX_focus_RAJ_british_investors
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_soyuz_brit
+		}
+		completion_reward = {
+		ENG = { country_event = { id = ENG_britain.56 } }
+		}
+		x = 29
+		y = 2
+
+	}
+	focus = {
+		id = IND_vnes_vintovrki
+		icon = GFX_goal_generic_build_tank
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_podderzka_Dementiya
+		}
+		completion_reward = {
+		add_war_support = 0.1
+		add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 6500
+			    producer = RAJ
+			}
+		}
+		
+		x = 29
+		y = 3
+
+	}
+	focus = {
+		id = IND_vnes_vliyanie2
+		icon = GFX_goal_generic_soviet_construction
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_vliyanie_com
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+				prioritize = { 423 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		
+		}
+		x = 18
+		y = 4
+
+	}
+	focus = {
+		id = IND_edina
+		icon = GFX_focus_RAJ_all_india_forward_bloc
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_communist2
+		}
+		completion_reward = {
+		create_wargoal = {
+ 				type = take_state_focus
+ 				target = BAN
+ 				expire = 0
+ 				generator = { 431 }
+ 			}
+			create_wargoal = {
+ 				type = take_state_focus
+ 				target = BRM
+ 				expire = 0
+ 				generator = { 432 }
+ 			}
+		}
+		x = 23
+		y = 6
+
+	}
+	focus = {
+		id = IND_vnes_obyedinenie
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		prerequisite = {
+			focus = IND_vnes_birma
+		}
+		mutually_exclusive = {
+			focus = IND_vnes_voyna
+		}
+		completion_reward = {
+		MAR = { country_event = MAR_india.1 days = 30 }
+		}
+		x = 18
+		y = 5
+
+	}
+	focus = {
+		id = IND_vnes_rezina
+		icon = GFX_focus_generic_rubber
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_podderzka_Dementiya
+		}
+		completion_reward = {
+		423 = {
+				add_resource = {
+					type = rubber
+					amount = 20
+				}
+			} 
+		}
+		x = 31
+		y = 3
+
+	}
+	focus = {
+		id = IND_vnes_indonezia_mest
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = IND_vnes_rezina
+		}
+		completion_reward = {
+		create_wargoal = {
+					type = puppet_wargoal_focus
+					target = AST
+					expire = 0
+				}
+		}
+		x = 31
+		y = 4
+
+	}
+}
+
+	
+	
+	
+	
+
+	
+	
+	
+
+	
+}
+
+

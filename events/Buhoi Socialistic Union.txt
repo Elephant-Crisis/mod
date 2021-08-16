@@ -1,0 +1,35 @@
+﻿###########################
+# BUH Events
+###########################
+add_namespace = BUH
+	country_event = {
+	id = BUH.4
+	title = BUH.4.t
+	desc = BUH.4.d
+	picture = GFX_report_event_japanese_officers
+fire_only_once = yes
+		trigger = {
+	tag = BUH
+owns_state = 282
+			has_full_control_of_state = 282
+	}
+	
+	option = { # Accept demands
+		name = BUH.4.a
+		ai_chance = {	factor = 90	}
+		
+	    BUH = {
+		add_ideas = Emperor
+		add_stability = 0.05
+		}
+		
+		}
+	
+	option = { # Accept demands
+		name = BUH.4.b
+		ai_chance = {	factor = 10	}
+		BUH = {
+		add_stability = -0.1
+		}
+	}
+	}

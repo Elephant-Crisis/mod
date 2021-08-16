@@ -1,0 +1,77 @@
+political_actions = {
+MON_kompomat_AST = {
+available = {
+			OR = {
+				has_completed_focus = MON_politka_stopka_documentov
+			}
+		}
+cost = 50
+		allowed = {
+			tag = MON
+		}
+visible = { 
+has_completed_focus = MON_politka_stopka_documentov
+}
+days_remove = 70
+fire_only_once = yes
+
+remove_effect = { 
+country_event = MON_kompomat_AST.4
+			}
+			
+ai_will_do = {
+factor = 1
+}
+}
+
+MON_kompomat_JAP = {
+available = {
+			OR = {
+				has_completed_focus = MON_politka_stopka_documentov
+			}
+		}
+cost = 50
+		allowed = {
+			tag = MON
+		}
+visible = { 
+has_completed_focus = MON_politka_stopka_documentov
+}
+days_remove = 70
+fire_only_once = yes
+
+remove_effect = { 
+country_event = MON_kompomat_JAP.4
+			}
+			
+ai_will_do = {
+factor = 1
+}
+}
+
+MON_kompomat_IND = {
+available = {
+			OR = {
+				has_completed_focus = MON_politka_stopka_documentov
+			}
+		}
+cost = 50
+		allowed = {
+			tag = MON
+		}
+visible = { 
+has_completed_focus = MON_politka_stopka_documentov
+}
+days_remove = 70
+fire_only_once = yes
+
+remove_effect = { 
+country_event = MON_kompomat_IND.4
+			}
+			
+ai_will_do = {
+factor = 1
+}
+}
+	
+                  }

@@ -1,0 +1,125 @@
+﻿division_template = {
+	name = "Division of Segun"
+
+	division_names_group = TOK_ARM_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+
+	}
+
+	priority = 0
+}
+division_template = {
+	name = "Elite Division of Segun"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = TOK_ARM_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+
+	}
+	support = {
+		artillery = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+
+units = {
+	#Army of Segun
+	division = {
+		name = "Division of Segun"
+		location = 1092
+		division_template = "Division of Segun"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.2
+	}
+	division = {
+		#name = "Division of Segun"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 26
+		}
+		location = 7197
+		division_template = "Division of Segun"
+		start_equipment_factor = 0.2
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		#name = "Division of Segun"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 1025
+		division_template = "Division of Segun"
+		start_equipment_factor = 0.3
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		#name = "Elite Division of Segun"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 4102
+		division_template = "Elite Division of Segun"
+		start_equipment_factor = 0.3
+		start_experience_factor = 0.4
+
+	}
+	division = {
+		#name = "Elite Division of Segun"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 1191
+		division_template = "Elite Division of Segun"
+		start_equipment_factor = 0.3
+		start_experience_factor = 0.4
+
+	}
+	
+
+}
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "TOK"
+		}
+		requested_factories = 2
+		progress = 0.38
+		efficiency = 80
+	}
+		add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "EMP"
+		}
+		requested_factories = 1
+		progress = 0.38
+		efficiency = 80
+	}
+}

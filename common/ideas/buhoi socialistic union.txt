@@ -1,0 +1,1095 @@
+ideas = {
+
+country = {
+
+		   busido = {
+	allowed = {
+	    original_tag = BUH
+		always = yes
+		}
+		
+		allowed_civil_war = {
+		 always = yes
+		 }
+		 
+		 removal_cost = -1
+		 picture = GFX_idea_busido
+		 
+		 modifier = {
+		  army_attack_factor = 0.05
+		  }
+
+}
+Emperor = {
+	allowed = {
+		always = no
+		}
+		
+		allowed_civil_war = {
+		 always = yes
+		 }
+		 
+		 removal_cost = -1
+		 picture = GFX_idea_Emperor
+		 
+		 modifier = {
+		  stability_factor = 0.25
+		  war_support_factor = 0.25
+		  }
+
+
+}
+
+          BUH_SOYUZ = {
+	allowed = {
+	    original_tag = BUH
+		always = yes
+		}
+		
+		allowed_civil_war = {
+		 always = yes
+		 }
+		 
+		 removal_cost = -1
+		 picture = great_depression
+		 
+		 modifier = {
+		   war_support_factor = -0.10
+		  research_speed_factor = -0.10
+		  production_factory_efficiency_gain_factor = -0.10
+		  production_factory_start_efficiency_factor = -0.10
+		  political_power_gain = -0.5
+		  max_command_power = -30	
+		  }
+		  
+		  }
+		  BUH_communism_vibor = {
+	allowed = {
+	    original_tag = BUH
+		always = yes
+		}
+		
+		allowed_civil_war = {
+		 always = yes
+		 }
+		 
+		 removal_cost = -1
+		 picture = GFX_BUH_communism_vibor
+		 
+		 modifier = {
+		  	production_factory_efficiency_gain_factor = 0.05
+			production_factory_max_efficiency_factor = 0.05
+			local_building_slots_factor = 0.10
+			conscription = -0.005
+
+		  }
+
+}
+		BUH_socialistic_vibor = {  
+        allowed = {
+	    original_tag = BUH
+		always = yes
+		}
+		allowed_civil_war = {
+		 always = yes
+		 }
+		 removal_cost = -1
+		 picture = GFX_BUH_socialistic_vibor
+		 modifier = {
+		 stability_factor = 0.05
+		 production_speed_buildings_factor	= 0.1
+		 conscription = 0.001
+
+		  }
+        
+
+}
+ 
+        BUH_socialistic_komissia = {
+		 allowed = {
+	    original_tag = BUH
+		always = yes
+		}
+		
+		allowed_civil_war = {
+		 always = yes
+		 }
+		 
+		 removal_cost = -1
+		 picture = GFX_idea_BUH_socialistic_komissia
+		 modifier = {
+		 political_power_gain = 0.5
+		 production_factory_start_efficiency_factor	 = 0.05
+
+		  }
+		  
+}
+
+        BUH_politka_rinok = {
+		allowed = {
+	    original_tag = BUH
+		always = yes
+		}
+		
+		allowed_civil_war = {
+		 always = yes
+		 }
+		 
+		 removal_cost = -1
+		 picture = GFX_idea_BUH_politka_rinok
+		 modifier = {
+		 min_export = -0.05
+		 conscription = 0.02
+
+
+		  }
+		  
+}
+
+        BUH_znak_kachestva = {
+		allowed = {
+	    original_tag = BUH
+		always = yes
+		}
+		
+		allowed_civil_war = {
+		 always = yes
+		 }
+		 
+		 removal_cost = -1
+		 picture = GFX_idea_BUH_znak_kachestva
+		 modifier = {
+		 stability_factor = 0.05
+		 production_factory_max_efficiency_factor = 0.15
+		 
+
+
+		  }
+		  
+}
+
+         BUH_politka_nalog = {
+		 allowed = {
+	    original_tag = BUH
+		always = yes
+		}
+		
+		allowed_civil_war = {
+		 always = yes
+		 }
+		 removal_cost = -1
+		 picture = GFX_idea_BUH_politka_nalog
+		 modifier = {
+		 consumer_goods_factor = -0.05
+		 
+
+
+		  }
+		  
+}
+
+         BUH_politka_valuterinok = {
+		 allowed = {
+	    original_tag = BUH
+		always = yes
+		}
+		allowed_civil_war = {
+		 always = yes
+		 }
+		 removal_cost = -1
+		 picture = GFX_idea_BUH_politka_valuterinok
+		 modifier = {
+		 production_factory_start_efficiency_factor = 0.1
+		 
+
+
+		  }
+		  
+}
+
+         BUH_politka_garantii = {
+		 allowed = {
+	    original_tag = BUH
+		always = yes
+		}
+		allowed_civil_war = {
+		 always = yes
+		 }
+		 removal_cost = -1
+		 picture = GFX_idea_BUH_politka_garantii
+		 modifier = {
+		 research_speed_factor = 0.1
+		 
+
+
+		  }
+		  
+}
+
+
+         BUH_sake = {
+		 allowed = {
+	    original_tag = BUH
+		always = yes
+		}
+		allowed_civil_war = {
+		 always = yes
+		 }
+		 removal_cost = -1
+		 picture = GFX_idea_BUH_sake
+		 modifier = {
+		 army_core_defence_factor = 0.15
+		 army_core_attack_factor = 0.15
+		 
+
+
+		  }
+		  
+}
+
+         BUH_kantaygol = {
+		 allowed = {
+	    original_tag = BUH
+		always = yes
+		}
+		allowed_civil_war = {
+		 always = yes
+		 }
+		 removal_cost = -1
+		 picture = GFX_idea_BUH_kantaygol
+		 modifier = {
+		 navy_screen_attack_factor = 0.15
+		 navy_capital_ship_attack_factor = 0.05
+
+		 
+ }
+ }
+ 
+
+
+}
+
+ 
+	political_advisor = {	
+		sanzo_nosaka = {
+			
+			available = {
+				if = {
+					limit = {
+						has_DLC = "Waking the Tiger"
+					}
+				}
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+				}
+			}
+			allowed = {
+				original_tag = "BUH"
+			}
+			
+
+			
+			traits = { communist_revolutionary }
+
+			do_effect = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}	
+			
+		kijuro_shidehara = {
+			
+			available = {
+				if = {
+					limit = {
+						has_DLC = "Waking the Tiger"
+					}
+				}
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+				}
+			}
+			
+			allowed = {
+				original_tag = "BUH"
+			}
+			
+
+			
+			traits = { democratic_reformer }
+
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		kingoro_hashimoto = {
+			
+			
+			allowed = {
+				original_tag = "BUH"
+			}
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+			
+			traits = { fascist_demagogue }
+
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		JAP_mitsumasa_yonai = {
+			
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+			traits = { silent_workhorse }
+		}
+
+		JAP_hiroshi_oshima = {
+			
+			picture = generic_political_advisor_asia_1
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+			traits = { prince_of_terror }
+
+			ai_will_do = {
+				factor = 0.3
+			}
+		}
+
+		JAP_chiune_sugihara = {
+			
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+
+		takuo_godo = {
+
+			picture = takuo_godo
+
+			allowed = {
+				original_tag = BUH
+			}
+
+			traits = { war_industrialist }
+
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+		
+	# MILITARY
+	army_chief = {
+		
+		kanin_kotohito = {
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { army_chief_offensive_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		hajime_sugiyama = {
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+			available = {
+			}
+			
+			traits = { army_chief_drill_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		hideki_tojo = {
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	navy_chief = {
+		
+		
+		
+		fushimi_hiroyasu = {
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { navy_chief_naval_aviation_2 }
+			
+			ai_will_do = {
+				factor = 0.2
+			}
+		}
+		
+		osami_nagano = {
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { navy_chief_commerce_raiding_1 }
+			
+			ai_will_do = {
+				factor = 0.2
+			}
+		}
+		
+		shigetaro_shimada = {
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 0.2
+			}
+		}
+	}
+	air_chief = {
+		
+		
+		torashiro_kawabe = {
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { air_chief_night_operations_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		korechika_anami = {
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { air_chief_ground_support_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		kenji_doihara = {
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { air_chief_all_weather_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+	
+	
+	high_command = {
+		
+		hitoshi_imamura = {
+			ledger = army
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		
+		yasuji_okamura = {
+			ledger = army
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { army_infantry_2 }
+			
+
+				}
+		
+		shunroku_hata = {
+			ledger = army
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { army_concealment_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+		mitsuo_fuchida = {
+			ledger = air
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { air_tactical_bombing_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		nishizo_tsukahara = {
+			ledger = navy
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { air_naval_strike_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		tateo_kato = {
+			ledger = air
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { air_air_combat_training_3 }
+			
+			ai_will_do = {
+				factor = 0.8
+			}
+		}	
+		
+		soemu_toyoda = {
+			ledger = navy
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { navy_capital_ship_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		matome_ugaki = {
+			ledger = navy
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { navy_naval_air_defense_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		chuichi_nagumo = {
+			ledger = air
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			traits = { navy_carrier_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+		
+	# TECHNOLOGY
+	naval_manufacturer = {
+		
+		designer = yes
+		
+		kure_naval_arsenal = {
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+
+
+
+			cost = 75
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { battlefleet_designer } # built Yamato
+
+		}
+		
+		yokosuka_naval_arsenal = {
+						
+			allowed = {
+				original_tag = BUH
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer } #built best CVs
+
+			equipment_bonus = {
+				# 
+			}
+		}
+		
+		maizuru_naval_arsenal = {
+						
+			allowed = {
+				original_tag = BUH
+			}
+				
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { convoy_escort_naval_manufacturer } #destroyer R&D
+
+			equipment_bonus = {
+				# 
+			}
+		}
+		
+		sasebo_naval_arsenal = {
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer } #used for many repairs and conversions
+			
+			equipment_bonus = {
+				
+			}
+		}	
+	}
+	
+	aircraft_manufacturer = {
+		
+		designer = yes
+		
+		mitsubishi = {
+						
+			allowed = {
+				original_tag = BUH		
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer_2 }
+
+			modifier = {
+
+			}
+		}
+
+		aichi = {
+			
+			allowed = {
+				original_tag = BUH
+			}
+
+
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { fuel_efficient_aircraft_manufacturer }
+		}
+		
+		nakajima = {
+						
+			allowed = {
+				original_tag = BUH
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+
+		}
+		
+		yokosuka = {
+						
+			allowed = {
+				original_tag = BUH
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+		}
+	}
+	
+	
+	industrial_concern = {
+	
+		kawasaki = {
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			
+			traits = { industrial_concern }
+		}
+		
+		
+		sumitomo = {
+						
+			allowed = {
+				original_tag = BUH
+			}
+						
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { electronics_concern }
+		}
+
+		JAP_idemitsu_kosan = {
+						
+			picture = generic_industrial_concern_2
+			
+			allowed = {
+				original_tag = BUH
+			}
+						
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.1
+			}
+			
+			traits = { refinery_concern }
+		}
+	}
+	
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		tokyo_arsenal = {
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+		
+		nissan = {
+						
+			allowed = {
+				original_tag = BUH
+			}
+						
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+	}
+	
+	
+	tank_manufacturer = {
+	
+		designer = yes
+	
+		osaka_army_arsenal = {
+			
+			allowed = {
+				original_tag = BUH
+			}
+				
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { tank_manufacturer }
+		}	
+	}
+	
+	theorist = {
+		
+		tomoyuki_yamashita = {
+			ledger = army
+						
+			allowed = {
+				original_tag = BUH
+			}
+			
+			cost = 250
+						
+			research_bonus = {
+				cat_grand_battle_plan = 0.15
+			}
+			
+			traits = { grand_battle_plan_expert }
+		}
+		
+		hisaichi_terauchi = {
+			ledger = army
+						
+			allowed = {
+				original_tag = BUH
+			}
+						
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		isoroku_yamamoto = {
+			ledger = navy
+						
+			allowed = {
+				original_tag = BUH
+			}
+			
+			cost = 250
+						
+			research_bonus = {
+				cat_base_strike = 0.15
+			}
+			
+			traits = { naval_aviation_pioneer }
+		}
+		
+		minoru_genda = {
+			ledger = navy
+						
+			allowed = {
+				original_tag = BUH
+			}
+						
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+		
+		yoshitoshi_tokugawa = {
+			ledger = air
+						
+			allowed = {
+				original_tag = BUH
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_operational_integrity = 0.15
+			}
+			
+			traits = { assault_avaition }
+		}
+		
+		hino_kumazo = {
+			ledger = air
+						
+			allowed = {
+				original_tag = BUH
+			}	
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		
+		yoshio_nishina = {
+			ledger = army
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			research_bonus = {
+				nuclear = 0.15
+			}
+			
+			traits = { nuclear_scientist }
+		}
+		
+		hideo_itokawa = {
+			ledger = air
+			
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+
+			
+			research_bonus = {
+				rocketry = 0.15
+			}
+			
+			traits = { rocket_scientist }
+		}
+	}	
+}
+		}
+	

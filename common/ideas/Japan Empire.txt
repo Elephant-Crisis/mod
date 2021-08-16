@@ -1,0 +1,107 @@
+ideas = {
+
+country = {
+
+		   busido = {
+	allowed = {
+	    original_tag = EMP
+		always = yes
+		}
+		
+		allowed_civil_war = {
+		 always = yes
+		 }
+		 
+		 removal_cost = -1
+		 picture = GFX_idea_busido
+		 
+		 modifier = {
+		  army_attack_factor = 0.05
+		  }
+
+}
+
+Emperor = {
+	allowed = {
+		always = yes
+		}
+		
+		allowed_civil_war = {
+		 always = yes
+		 }
+		 
+		 removal_cost = -1
+		 picture = GFX_idea_Emperor
+		 
+		 modifier = {
+		  stability_factor = 0.25
+		  war_support_factor = 0.25
+		  }
+
+
+}
+
+}
+	political_advisor = {
+
+		BUH_taktra_rinpoche = {
+
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+			traits = { backroom_backstabber }
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		BUH_jigme_taring = {
+
+			picture = generic_political_advisor_asia_1
+				
+			allowed = {
+				original_tag = BUH
+			}
+			
+			traits = { war_industrialist }
+		}
+
+		BUH_reting_rimpoche = {
+
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = BUH
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+	}
+
+	theorist = {
+		
+	}
+
+	high_command = {
+
+
+
+	}
+
+	army_chief = {
+		
+
+	}
+
+	air_chief = {
+
+	}
+	
+	navy_chief = {
+
+		
+	}
+}

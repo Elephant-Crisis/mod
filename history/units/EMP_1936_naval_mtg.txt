@@ -1,0 +1,15 @@
+﻿units= {
+
+	##### Naval OOB #####
+	fleet = {
+		name = "Armada of Emperor"			
+		naval_base = 9998 # 
+		task_force = {
+			name = "Armada of Emperor"
+			location = 9998 # 
+			ship = { name = "Sendai" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_1 = {amount = 1 owner = EMP version_name = "Sendai Class"} } }
+
+		}				
+	}
+} 
+

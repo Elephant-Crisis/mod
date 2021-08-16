@@ -1,0 +1,58 @@
+﻿###########################
+# Australia Events
+###########################
+
+#### RED ELEPHANT НЕ УДАЛЯЙ!!!
+add_namespace = BEL_belgium
+country_event = {
+    id = BEL_belgium.1
+    title = BEL_belgium.1.t
+    desc = BEL_belgium.1.d
+    picture = GFX_report_event_soviet_finnish_pact
+
+    is_triggered_only = yes
+
+    option = {
+        name = BEL_belgium.1.a
+        ENG = {
+		puppet = BEL
+        }
+		custom_effect_tooltip = BEL_vassal
+
+          news_event = { id = news.507 }
+
+		ai_chance = {	factor = 90	}
+    }
+	 option = {
+        name = BEL_belgium.1.b
+ENG = {
+		country_event = ENG_britain.60
+}
+add_war_support = 0.1
+ai_chance = {	factor = 10	}
+
+    }
+
+   
+}
+country_event = {
+    id = BEL_belgium.2
+    title = BEL_belgium.2.t
+    desc = BEL_belgium.2.d
+    picture = GFX_report_event_soviet_finnish_pact
+fire_only_once = yes
+
+trigger = {
+BEC = { 
+has_full_control_of_state = 6
+has_full_control_of_state = 34
+}
+    }
+    option = {
+        name = BEL_belgium.2.a
+BEL = { annex_country = { target = BEC } }
+
+
+}
+   
+}

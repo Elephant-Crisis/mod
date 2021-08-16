@@ -1,0 +1,27 @@
+﻿###########################
+# Australia Events
+###########################
+
+	add_namespace = AST
+	country_event = {
+	id = AST.4
+	title = AST.4.t
+	desc = AST.4.d
+	picture = GFX_report_event_spr_captured_republican
+is_triggered_only = yes
+		
+	
+	option = { # Accept demands
+		name = AST.4.a
+		ai_chance = {	factor = 10	}
+		
+	    AST = {
+		
+		add_stability = -0.05
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		set_country_flag = AST_flag_rabi
+		}
+		
+		
+	}
+}

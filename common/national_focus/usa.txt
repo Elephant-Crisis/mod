@@ -1,0 +1,1032 @@
+focus_tree = {
+	id = usa_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = USA
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = USA
+		}
+	}
+	
+	focus = {
+		id = USA_noviy_prezident
+		icon = GFX_goal_tripartite_pact
+		cost = 5
+		completion_reward = {
+		add_political_power = 100
+		}
+		x = 15
+		y = 0
+
+	}
+	focus = {
+		id = USA_voenka_razvitie
+		icon = GFX_goal_generic_military_sphere
+		cost = 10
+		prerequisite = {
+			focus = USA_noviy_prezident
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		navy_experience = 25
+		army_experience = 25
+		air_experience = 25
+		}
+		x = 7
+		y = 1
+
+	}
+	focus = {
+		id = USA_voenka_suhoputka
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 5
+		prerequisite = {
+			focus = USA_voenka_razvitie
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_war_support = 0.1
+		army_experience = 25
+		}
+		
+		x = 4
+		y = 2
+
+	}
+	focus = {
+		id = USA_voenka_novoe_vooruzenie
+		icon = GFX_goal_generic_army_artillery
+		cost = 5
+		prerequisite = {
+			focus = USA_voenka_suhoputka
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = USA_automatic_rifle
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+		x = 3
+		y = 3
+
+	}
+	focus = {
+		id = USA_voenka_doctrina
+		icon = GFX_goal_generic_army_doctrines
+		cost = 5
+		prerequisite = {
+			focus = USA_voenka_suhoputka
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = USA_army_doctrina
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		
+		}
+		x = 5
+		y = 3
+
+	}
+	focus = {
+		id = USA_voenka_speznaz
+		icon = GFX_goal_generic_attack_allies
+		cost = 5
+		prerequisite = {
+			focus = USA_voenka_doctrina
+		}
+	    completion_reward = {
+			add_tech_bonus = {
+				name = USA_marines_and_landing_craft
+				bonus = 1.0
+				uses = 1
+				category = marine_tech
+			}
+			add_tech_bonus = {
+				name = special
+				bonus = 1.0
+				uses = 1
+				category = para_tech
+				#technology = paratroopers
+				#technology = paratroopers2
+			}
+			
+			}
+		x = 5
+		y = 4
+
+	}
+	focus = {
+		id = USA_voenka_doctrina_prinatie
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5
+		prerequisite = {
+			focus = USA_voenka_speznaz
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = USA_army_doctrina
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		
+		}
+		x = 5
+		y = 5
+
+	}
+	focus = {
+		id = USA_vozduh_VVS
+		icon = GFX_goal_generic_air_doctrine
+		cost = 5
+		prerequisite = {
+			focus = USA_voenka_razvitie
+		}
+		completion_reward = {
+		air_experience = 25
+		}
+		x = 7
+		y = 2
+
+	}
+	focus = {
+		id = USA_vozduh_istrebiteli
+		icon = GFX_goal_generic_air_fighter2
+		cost = 5
+		prerequisite = {
+			focus = USA_vozduh_VVS
+		}
+		completion_reward = {
+					add_tech_bonus = {
+				name = fighter_command
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+		}
+		x = 7
+		y = 3
+
+	}
+	focus = {
+		id = USA_vozduh_sturmoviki
+		icon = GFX_goal_generic_air_fighter
+		cost = 5
+		prerequisite = {
+			focus = USA_vozduh_istrebiteli
+		}
+		completion_reward = {
+					add_tech_bonus = {
+				name = CAS
+				uses = 1
+				bonus = 1.0
+				category = cas_bomber
+			}
+		
+		}
+		x = 7
+		y = 4
+
+	}
+	focus = {
+		id = USA_vozduh_bombardirovsiki
+		icon = GFX_goal_generic_air_bomber
+		cost = 5
+		prerequisite = {
+			focus = USA_vozduh_sturmoviki
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = USA_TAC
+				uses = 1
+				bonus = 1.0
+				category = tactical_bomber
+			}
+			}
+		x = 7
+		y = 5
+
+	}
+	focus = {
+		id = USA_vozduh_amerikanskiy_surpriz
+		icon = GFX_goal_generic_CAS
+		cost = 5
+		prerequisite = {
+			focus = USA_vozduh_bombardirovsiki
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = bomber_bonus_taz
+				bonus = 1.0
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+		x = 7
+		y = 6
+
+	}
+	focus = {
+		id = USA_naval_razvitie
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 5
+		prerequisite = {
+			focus = USA_voenka_razvitie
+		}
+		completion_reward = {
+		navy_experience = 25
+		}
+		x = 9
+		y = 2
+
+	}
+	focus = {
+		id = USA_naval_doctrina
+		icon = GFX_goal_generic_navy_battleship
+		cost = 5
+		prerequisite = {
+			focus = USA_naval_razvitie
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = USA_flot
+				bonus = 1.0
+				uses = 1
+				category = naval_doctrine	
+			}
+			}
+		x = 9
+		y = 3
+
+	}
+	focus = {
+		id = USA_naval_verfi_buro
+		icon = GFX_goal_generic_build_navy
+		cost = 5
+		prerequisite = {
+			focus = USA_naval_doctrina
+		}
+		completion_reward = {
+		custom_effect_tooltip = available_theorist
+	    show_ideas_tooltip = dewitt_clinton_ramsey
+		}
+		x = 9
+		y = 4
+
+	}
+	focus = {
+		id = USA_naval_novie_korabli
+		icon = GFX_goal_generic_navy_carrier
+		cost = 5
+		prerequisite = {
+			focus = USA_naval_verfi_buro
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = usa_carrier_focus
+				bonus = 1.0
+				uses = 1
+				category = cv_tech
+			}
+			add_tech_bonus = {
+				name = usa_battleship_focus
+				bonus = 1.0
+				uses = 1
+				category = bb_tech
+			}
+		}
+		x = 9
+		y = 5
+
+	}
+	focus = {
+		id = USA_naval_liberti_visadka
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 5
+		prerequisite = {
+			focus = USA_naval_novie_korabli
+		}
+		completion_reward = {
+		add_ideas = liberty_ships_focus
+		}
+		x = 9
+		y = 6
+
+	}
+	focus = {
+		id = USA_politka_vuntr
+		icon = GFX_goal_generic_national_unity
+		cost = 5
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {
+			focus = USA_noviy_prezident
+		}
+		completion_reward = {
+		add_political_power = 100
+		}
+		x = 15
+		y = 1
+
+	}
+	focus = {
+		id = USA_politka_vzaimoontosenie
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		prerequisite = {
+			focus = USA_politka_vuntr
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = USA_robert_taft
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = USA_joseph_mccarthy
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = USA_henry_morgenthau
+		}
+		x = 13
+		y = 2
+
+	}
+	focus = {
+		id = USA_politka_ustranenie_pordaznih
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5
+		prerequisite = {
+			focus = USA_politka_vzaimoontosenie
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+		add_stability = 0.10
+		remove_ideas = nestabilnoe_pravitelstvo_USA
+		add_ideas = nestabilnoe_pravitelstvo2_USA
+		}
+		x = 12
+		y = 3
+
+	}
+	focus = {
+		id = USA_politka_nuzda
+		icon = GFX_focus_generic_concessions
+		cost = 10
+		prerequisite = {
+			focus = USA_politka_vzaimoontosenie
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+		add_ideas = USA_dorogi
+		}
+		x = 14
+		y = 3
+
+	}
+	focus = {
+		id = USA_politka_indeysi
+		icon = GFX_goal_continuous_boost_freedom
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {
+			focus = USA_politka_nuzda
+		}
+	    completion_reward = {
+		add_ideas = USA_indeysi
+		}
+		x = 14
+		y = 4
+
+	}
+	focus = {
+		id = USA_politka_ministerstvo_problem
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {
+			focus = USA_politka_indeysi
+		}
+		completion_reward = {
+		add_war_support = 0.1
+		add_stability = 0.1
+		}
+		x = 14
+		y = 5
+
+	}
+	focus = {
+		id = USA_promka_20vek
+		icon = GFX_goal_generic_construct_civilian
+		cost = 5
+		prerequisite = {
+			focus = USA_politka_vuntr
+		}
+		completion_reward = {
+		
+
+			add_tech_bonus = {
+				name = USA_promka
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+		
+		
+		x = 17
+		y = 2
+
+	}
+	focus = {
+		id = USA_promka_voenka1
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5
+		prerequisite = {
+			focus = USA_promka_20vek
+		}
+		completion_reward = {
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+
+			}
+		
+		}
+		x = 16
+		y = 3
+
+	}
+	focus = {
+		id = USA_promka_voenka2
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5
+		prerequisite = {
+			focus = USA_promka_voenka1
+		}
+				completion_reward = {
+				random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+
+			}
+		
+		}
+		x = 16
+		y = 4
+
+	}
+	focus = {
+		id = USA_promka_verfi
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 5
+		prerequisite = {
+			focus = USA_promka_voenka2
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
+		x = 16
+		y = 5
+
+	}
+	focus = {
+		id = USA_promka_grazdanka
+		icon = GFX_goal_generic_consumer_goods
+		cost = 5
+		prerequisite = {
+			focus = USA_promka_20vek
+		}
+				completion_reward = {
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
+		x = 18
+		y = 3
+
+	}
+	focus = {
+		id = USA_promka_grazdanka2
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 5
+		prerequisite = {
+			focus = USA_promka_grazdanka
+		}
+						completion_reward = {
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
+		x = 18
+		y = 4
+
+	}
+	focus = {
+		id = USA_promka_dorogi
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5
+		prerequisite = {
+			focus = USA_promka_grazdanka2
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				}
+			}
+		x = 18
+		y = 5
+
+	}
+	focus = {
+		id = USA_promka_stroitelstvo
+		icon = GFX_goal_generic_construction
+		cost = 5
+		prerequisite = {
+			focus = USA_promka_dorogi
+		}
+		prerequisite = {
+			focus = USA_promka_verfi
+		}
+		completion_reward = {
+		add_ideas = USA_stroitelstvo
+		}
+		x = 17
+		y = 6
+
+	}
+	focus = {
+		id = USA_vnesneya_politka
+		icon = GFX_goal_generic_alliance
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {
+			focus = USA_noviy_prezident
+		}
+		completion_reward = {
+		add_political_power = 100
+		}
+		x = 22
+		y = 1
+
+	}
+	focus = {
+		id = USA_vnesneya_torg_prestavitelstvo
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {
+			focus = USA_vnesneya_politka
+		}
+		
+		completion_reward = {
+		unlock_decision_tooltip = USA_cuba_torg_predstavitelstvo
+		unlock_decision_tooltip = USA_GUA_torg_predstavitelstvo
+		unlock_decision_tooltip = USA_ELS_torg_predstavitelstvo
+		unlock_decision_tooltip = USA_HON_torg_predstavitelstvo
+		unlock_decision_tooltip = USA_NIC_torg_predstavitelstvo
+		unlock_decision_tooltip = USA_PAN_torg_predstavitelstvo
+		unlock_decision_tooltip = USA_GAI_torg_predstavitelstvo
+		unlock_decision_tooltip = USA_DOM_torg_predstavitelstvo
+		unlock_decision_tooltip = USA_COS_torg_predstavitelstvo
+		news_event = news.509
+		}
+		
+		x = 21
+		y = 2
+
+	}
+	focus = {
+		id = USA_vnesneya_Mexico
+		icon = GFX_focus_mex_jefe_maximo
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {
+			focus = USA_vnesneya_torg_prestavitelstvo
+		}
+		completion_reward = {
+		unlock_decision_tooltip = USA_MEX_torg_predstavitelstvo
+		}
+		x = 21
+		y = 3
+
+	}
+	focus = {
+		id = USA_vnesneya_Brazilia
+		icon = GFX_focus_por_recover_brazil
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {
+			focus = USA_vnesneya_Mexico
+		}
+		completion_reward = {
+		 unlock_decision_tooltip = USA_BRA_torg_predstavitelstvo
+		}
+		x = 21
+		y = 4
+
+	}
+	focus = {
+		id = USA_vnesneya_Argentina
+		ai_will_do = {
+			factor = 12
+		}
+		icon = GFX_focus_por_recover_latin_america
+		cost = 10
+		prerequisite = {
+			focus = USA_vnesneya_Brazilia
+		}
+		
+		completion_reward = {
+		 unlock_decision_tooltip = USA_ARG_torg_predstavitelstvo
+		}
+		x = 21
+		y = 5
+
+	}
+	focus = {
+		id = USA_voenka_m1Garand
+		icon = GFX_goal_generic_small_arms
+		cost = 5
+		prerequisite = {
+			focus = USA_voenka_novoe_vooruzenie
+		}
+		completion_reward = {
+		add_ideas = M1Garand
+		}
+		x = 3
+		y = 4
+
+	}
+	focus = {
+		id = USA_voenka_Pershing
+		icon = GFX_goal_generic_army_tanks
+		cost = 5
+		prerequisite = {
+			focus = USA_voenka_m1Garand
+		}
+		completion_reward = {
+		add_tech_bonus = {
+				name = USA_tank
+				bonus = 1.0
+				uses = 2
+				technology = improved_heavy_tank
+				technology = advanced_heavy_tank 
+			}
+		
+		}
+		x = 3
+		y = 5
+
+	}
+	focus = {
+		id = USA_voenka_Yaderka
+		icon = GFX_focus_wonderweapons
+		cost = 5
+		prerequisite = {
+			focus = USA_voenka_Pershing
+		}
+		prerequisite = {
+			focus = USA_voenka_doctrina_prinatie
+		}
+		completion_reward = {
+		add_research_slot = 1
+			add_tech_bonus = {
+				name = yaderka_focus
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
+		
+		}
+		
+		x = 4
+		y = 6
+
+	}
+	focus = {
+		id = USA_politka_vibori_guberov
+		icon = GFX_goal_support_democracy
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {
+			focus = USA_politka_ustranenie_pordaznih
+		}
+		completion_reward = {
+		 democracy_drift = 0.10	
+		 add_stability = 0.1
+		 
+		 
+		}
+		x = 12
+		y = 4
+
+	}
+	focus = {
+		id = USA_politka_senat_kongress
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {
+			focus = USA_politka_vibori_guberov
+		}
+		completion_reward = {
+		remove_ideas = nestabilnoe_pravitelstvo2_USA
+		add_ideas = nestabilnoe_pravitelstvo3_USA
+		
+		}
+		x = 12
+		y = 5
+
+	}
+	focus = {
+		id = USA_politka_amerik_mechta
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {
+			focus = USA_politka_senat_kongress
+		}
+		prerequisite = {
+			focus = USA_politka_ministerstvo_problem
+		}
+		completion_reward = {
+		remove_ideas = nestabilnoe_pravitelstvo3_USA
+		}
+		x = 13
+		y = 6
+
+	}
+	focus = {
+		id = USA_promka_rassvet
+		icon = GFX_goal_generic_production
+		cost = 5
+		prerequisite = {
+			focus = USA_promka_stroitelstvo
+		}
+		completion_reward = {
+		
+			    add_timed_idea = {
+				idea = USA_rassvet_economici
+				days = 365
+			}
+		
+		}
+		x = 17
+		y = 7
+
+	}
+	focus = {
+		id = USA_vnesneya_Arena
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10
+ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_vnesneya_politka
+		}
+		completion_reward = {
+		add_political_power = 100
+		}
+		x = 23
+		y = 2
+
+	}
+	focus = {
+		id = USA_vnesneya_alliance
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_vnesneya_Arena
+		}
+		completion_reward = {
+		set_rule = { can_create_factions = yes }
+		create_faction = USA_Washington_Pact
+		}
+		x = 23
+		y = 3
+
+	}
+	focus = {
+		id = USA_vnesneya_FRA
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_vnesneya_alliance
+		}
+		completion_reward = {
+
+			FRA = { country_event = generic.5 days = 30 }
+			add_ai_strategy = {
+				type = protect
+				id = "FRA"
+				value = 100
+			}
+		}
+		
+		x = 23
+		y = 4
+		}
+
+	
+	focus = {
+		id = USA_vnesneya_ENG
+		icon = GFX_focus_AST_never_gallipoli
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_vnesneya_FRA
+		}
+		completion_reward = {
+		create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ENG
+					expire = 0
+				}
+		}
+		x = 23
+		y = 5
+
+	}
+		focus = {
+		id = USA_global_rinok
+		icon = GFX_focus_usa_recruit_the_free_corps
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {
+			focus = USA_vnesneya_Argentina
+		}
+		completion_reward = {
+		remove_ideas = pereizbitok_tovara_USA
+		}
+		available = {
+OR = {
+		MEX = {
+			is_puppet_of = USA
+			}
+		
+
+		BRA = {
+			is_puppet_of = USA
+			}
+		
+		
+		ARG = {
+			is_puppet_of = USA
+			}
+		}
+		}
+		x = 21
+		y = 6
+
+	}
+	focus = {
+		id = USA_vnesneya_Azia
+		icon = GFX_focus_usa_focus_on_asia
+		cost = 10
+		prerequisite = {
+			focus = USA_vnesneya_ENG
+		}
+		prerequisite = {
+			focus = USA_global_rinok
+		}
+		completion_reward = {
+		create_wargoal = {
+					type = puppet_wargoal_focus
+					target = BUH
+					expire = 0
+				}
+	    create_wargoal = {
+					type = puppet_wargoal_focus
+					target = EMP
+					expire = 0
+				}
+					    create_wargoal = {
+					type = puppet_wargoal_focus
+					target = AST
+					expire = 0
+				}
+		create_wargoal = {
+					type = puppet_wargoal_focus
+					target = HOS
+					expire = 0
+				}
+		create_wargoal = {
+					type = puppet_wargoal_focus
+					target = TOK
+					expire = 0
+				}
+		create_wargoal = {
+					type = puppet_wargoal_focus
+					target = UES
+					expire = 0
+				}
+		create_wargoal = {
+					type = puppet_wargoal_focus
+					target = PHI
+					expire = 0
+				}
+	    create_wargoal = {
+					type = puppet_wargoal_focus
+					target = KOR
+					expire = 0
+				}
+
+		
+		
+		}
+		x = 22
+		y = 7
+
+	}
+
+	
+	
+	
+	
+}
